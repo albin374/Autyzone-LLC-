@@ -1128,32 +1128,34 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 10;
 }
 
-.vision-block {
-  padding: 3.5rem;
-  background: rgba(4, 8, 15, 0.6);
-  backdrop-filter: blur(15px);
-  border-left: 4px solid var(--red-accent);
-  border-radius: 0 16px 16px 0;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
+.vision-card {
+  padding: 3rem;
+  background-color: var(--bg-card);
+  border: 1px solid rgba(77, 148, 255, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  text-align: center;
 }
 
-.vision-block:hover {
+.vision-card:hover {
+  border-color: var(--blue-glow);
   transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(38, 118, 245, 0.2);
 }
 
 .vision-title {
   font-family: var(--font-display);
-  font-size: 2.5rem;
-  color: white;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--blue-glow);
+  margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .vision-text {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  color: var(--text-muted);
   line-height: 1.8;
   font-weight: 300;
 }
@@ -1188,8 +1190,21 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     gap: 2rem;
   }
-  .category-grid, .product-grid, .features-grid, .footer-grid, .vision-grid {
+  .category-grid, .product-grid, .features-grid, .footer-grid {
     grid-template-columns: 1fr;
+  }
+  .vision-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .vision-card {
+    padding: 1.5rem;
+  }
+  .vision-title {
+    font-size: 1.3rem;
+  }
+  .vision-text {
+    font-size: 0.9rem;
   }
   .nav-links {
     display: none;
