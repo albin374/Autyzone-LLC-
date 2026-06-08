@@ -661,7 +661,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1px;
   background-color: rgba(77, 148, 255, 0.2);
   border: 1px solid rgba(77, 148, 255, 0.2);
@@ -732,7 +732,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
@@ -1154,6 +1154,15 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
   }
   .nav-links {
-    display: none; /* simple mobile nav handling */
+    display: none;
+  }
+  .hero-left h1 {
+    font-size: 2.5rem;
+  }
+  .h1-line3 {
+    font-size: 0.8rem;
+  }
+  .hero-body {
+    font-size: 0.95rem;
   }
 }
