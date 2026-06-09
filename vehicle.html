@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Sales | AUTYZONE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .ws-section { padding: 6rem 0; }
+    .ws-bg-dark { background-color: #0a0a0c; }
+    .ws-bg-light { background-color: #111114; }
+    .ws-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    
+    .ws-card { 
+      background: rgba(26, 26, 30, 0.75); 
+      backdrop-filter: blur(12px);
+      padding: 2.5rem; 
+      border-radius: 12px; 
+      border: 1px solid rgba(255,255,255,0.05);
+      border-left: 4px solid var(--primary-color); 
+      transition: all 0.3s ease; 
+    }
+    .ws-card:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5); 
+      background: rgba(36, 36, 42, 0.85);
+    }
+    .ws-card-title { font-family: var(--font-display); font-size: 1.5rem; color: #fff; margin-bottom: 1rem; }
+    .ws-card-desc { color: #d0d0d5; line-height: 1.6; }
+    
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; margin-top: 2.5rem; flex-wrap: wrap; }
+    
+    .check-list { list-style: none; padding: 0; }
+    .check-list li { 
+      position: relative; 
+      padding-left: 30px; 
+      margin-bottom: 0.8rem; 
+      color: #e0e0e0; 
+      font-size: 1.05rem;
+    }
+    .check-list li::before { 
+      content: '✓'; 
+      position: absolute; 
+      left: 0; 
+      color: var(--primary-color); 
+      font-weight: bold; 
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .pill-list span {
+      background: rgba(255, 255, 255, 0.05); 
+      color: #e0e0e0; 
+      padding: 0.5rem 1rem; 
+      border-radius: 20px; 
+      font-size: 0.9rem; 
+      border: 1px solid rgba(255, 255, 255, 0.1); 
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY HEADER / NAV -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo-area">
+        <a href="index.html"><img src="media/logo.png" alt="Autyzone Logo" class="brand-logo"></a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About Us</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Products ▾</a>
+          <div class="dropdown-content">
+            <a href="parts.html">Automotive Parts Supply</a>
+            <a href="wholesale.html">B2B Wholesale Solutions</a>
+            <a href="vehicle.html">Vehicle Sales</a>
+            <a href="tech.html">Tech Driven Operations</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary btn-shop-now">CONTACT US</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE BANNER (HERO) -->
+  <section class="page-banner" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(10, 10, 12, 1) 100%), url('media/Vehicle Sales.jpg'); background-size: cover; background-position: center; min-height: 65vh; display: flex; align-items: center; justify-content: center; padding-top: 95px; text-align: center;">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <span class="eyebrow" style="margin-bottom: 1rem; display: block;">VEHICLE SALES</span>
+        <h1 style="font-size: 3.5rem; color: white; font-family: var(--font-body); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem;">
+          Fleet & Commercial Vehicle Solutions
+        </h1>
+        <p style="font-size: 1.1rem; color: #ccc; line-height: 1.6; margin-bottom: 2rem;">
+          Drive your business forward with reliable fleet and commercial vehicles designed for performance, efficiency, and long-term value. Whether you're managing a growing fleet or expanding your commercial operations, we provide tailored vehicle solutions to meet your business needs.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary" style="padding: 16px 35px; font-size: 1.1rem;">Request a Quote</a>
+          <a href="#contact" class="btn" style="background: rgba(255,255,255,0.1); color: white; padding: 16px 35px; border-radius: 2px; font-weight: 600; text-decoration: none; border: 1px solid rgba(255,255,255,0.2);">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- FEATURED FLEET MODELS -->
+  <section class="ws-section ws-bg-dark">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+        <span class="eyebrow">SHOWCASE</span>
+        <h2 class="section-title">Available Fleet Models</h2>
+      </div>
+      <div class="visual-category-grid">
+        <a href="#quote" class="visual-card">
+          <img src="media/i10.jpg" alt="i10">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">i10</h3>
+            <span class="visual-card-btn">VIEW DETAILS</span>
+          </div>
+        </a>
+        <a href="#quote" class="visual-card">
+          <img src="media/ELANTRA.png" alt="ELANTRA">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">ELANTRA</h3>
+            <span class="visual-card-btn">VIEW DETAILS</span>
+          </div>
+        </a>
+        <a href="#quote" class="visual-card">
+          <img src="media/SONATA.png" alt="SONATA">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">SONATA</h3>
+            <span class="visual-card-btn">VIEW DETAILS</span>
+          </div>
+        </a>
+        <a href="#quote" class="visual-card">
+          <img src="media/PALISADE.webp" alt="PALISADE">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">PALISADE</h3>
+            <span class="visual-card-btn">VIEW DETAILS</span>
+          </div>
+        </a>
+        <a href="#quote" class="visual-card">
+          <img src="media/SANTA FE.webp" alt="SANTA FE">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">SANTA FE</h3>
+            <span class="visual-card-btn">VIEW DETAILS</span>
+          </div>
+        </a>
+        <a href="#quote" class="visual-card">
+          <img src="media/H-1.jpg" alt="H-1">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">H-1</h3>
+            <span class="visual-card-btn">VIEW DETAILS</span>
+          </div>
+        </a>
+        <a href="#quote" class="visual-card">
+          <img src="media/STARIA (Van).png" alt="STARIA (Van)">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">STARIA (VAN)</h3>
+            <span class="visual-card-btn">VIEW DETAILS</span>
+          </div>
+        </a>
+        <a href="#quote" class="visual-card">
+          <img src="media/H-100.png" alt="H-100">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">H-100</h3>
+            <span class="visual-card-btn">VIEW DETAILS</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES WE SERVE -->
+  <section class="ws-section" style="background-image: linear-gradient(rgba(5, 5, 10, 0.7), rgba(5, 5, 10, 0.85)), url('media/industries_we_serve.png'); background-size: cover; background-position: center; background-attachment: fixed; position: relative;">
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+        <span class="eyebrow">SECTORS</span>
+        <h2 class="section-title">Industries We Serve</h2>
+      </div>
+      <div class="ws-grid">
+        <div class="ws-card">
+          <h3 class="ws-card-title">Logistics & Transportation</h3>
+          <p class="ws-card-desc">Reliable vehicles optimized for continuous goods movement and fast delivery operations.</p>
+        </div>
+        <div class="ws-card">
+          <h3 class="ws-card-title">Corporate Businesses</h3>
+          <p class="ws-card-desc">Professional fleet solutions perfectly suited for employees, sales teams, and executives.</p>
+        </div>
+        <div class="ws-card">
+          <h3 class="ws-card-title">Tourism & Hospitality</h3>
+          <p class="ws-card-desc">Comfortable, high-quality transportation solutions designed for guests and travel services.</p>
+        </div>
+        <div class="ws-card">
+          <h3 class="ws-card-title">Construction & Industrial</h3>
+          <p class="ws-card-desc">Durable, rugged commercial vehicles built for heavy-duty applications and tough sites.</p>
+        </div>
+        <div class="ws-card">
+          <h3 class="ws-card-title">Government & Public Sector</h3>
+          <p class="ws-card-desc">Compliant fleet solutions built for official, civic, and high-demand operational requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <div class="logo-area">
+          <img src="media/logo.png" alt="Autyzone Logo" class="brand-logo-footer">
+        </div>
+        <p class="footer-desc">Autyzone is more than a trading company — we are building a technology driven automotive network designed for speed, accuracy, and long term scalability.</p>
+      </div>
+      
+      <div class="footer-col">
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="parts.html">Automotive Parts Supply</a></li>
+          <li><a href="wholesale.html">B2B Wholesale Solutions</a></li>
+          <li><a href="vehicle.html">Vehicle Sales</a></li>
+          <li><a href="tech.html">Tech Driven Operations</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#contact">Contact Support</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col" id="contact">
+        <h4 class="footer-heading">Contact Us</h4>
+        <ul class="footer-links contact-links">
+          <li>📞 +1 800 123 4567</li>
+          <li>✉️ support@autyzone.com</li>
+          <li>📍 Global Operations</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container flex-between">
+        <p>&copy; 2026 AUTYZONE LLC. All rights reserved.</p>
+        <p>A Technology Driven Automotive Network</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

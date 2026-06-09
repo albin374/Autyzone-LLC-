@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automotive Parts Supply | AUTYZONE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- STICKY HEADER / NAV -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo-area">
+        <a href="index.html"><img src="media/logo.png" alt="Autyzone Logo" class="brand-logo"></a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About Us</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Products ▾</a>
+          <div class="dropdown-content">
+            <a href="parts.html">Automotive Parts Supply</a>
+            <a href="wholesale.html">B2B Wholesale Solutions</a>
+            <a href="vehicle.html">Vehicle Sales</a>
+            <a href="tech.html">Tech Driven Operations</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary btn-shop-now">CONTACT US</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE BANNER -->
+  <section class="page-banner" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url('media/parts.jpeg'); background-size: cover; background-position: center; height: 60vh; min-height: 450px; display: flex; align-items: center; justify-content: center; padding-top: 95px;">
+    <div class="container" style="width: 100%; text-align: center;">
+      <div style="max-width: 1000px; margin: 0 auto;">
+        <h1 style="font-size: 2.8rem; color: white; font-family: var(--font-body); font-weight: 700; text-transform: capitalize; text-shadow: 0 2px 10px rgba(0,0,0,0.8); margin-bottom: 0.5rem;">
+          Find Parts For Your Vehicle
+        </h1>
+        <p style="font-size: 1rem; color: #e0e0e0; margin-bottom: 2.5rem; text-shadow: 0 1px 5px rgba(0,0,0,0.8); font-weight: 500;">Over hundreds of brands and tens of thousands of parts</p>
+        
+        <form class="part-search-form" style="display: flex; gap: 10px; background: transparent; flex-wrap: wrap; justify-content: center;">
+          <select style="flex: 1; min-width: 160px; padding: 14px 15px; border: none; border-radius: 2px; font-size: 0.9rem; color: #666; appearance: none; background: #dcdedd url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%23555\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg>') no-repeat right 15px center; background-size: 12px; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <option value="">Select Make</option>
+            <option value="Hyundai">Hyundai</option>
+          </select>
+          <select id="modelCategory" onchange="updateCars()" style="flex: 1; min-width: 160px; padding: 14px 15px; border: none; border-radius: 2px; font-size: 0.9rem; color: #666; appearance: none; background: #ffffff url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%23555\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg>') no-repeat right 15px center; background-size: 12px; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2); cursor: pointer;">
+            <option value="All">Select Model (All)</option>
+            <option value="Cars">Cars</option>
+            <option value="Eco">Eco</option>
+            <option value="SUV">SUV</option>
+            <option value="N">N</option>
+            <option value="N Line">N Line</option>
+            <option value="MPV">MPV</option>
+            <option value="Commercial">Commercial</option>
+          </select>
+          <select id="carSelect" style="flex: 1; min-width: 160px; padding: 14px 15px; border: none; border-radius: 2px; font-size: 0.9rem; color: #666; appearance: none; background: #dcdedd url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%23555\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg>') no-repeat right 15px center; background-size: 12px; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2); cursor: pointer;">
+            <option value="">Select Car</option>
+          </select>
+          <select id="partCategory" style="flex: 1; min-width: 160px; padding: 14px 15px; border: none; border-radius: 2px; font-size: 0.9rem; color: #555; appearance: none; background: #ffffff url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%23333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg>') no-repeat right 15px center; background-size: 12px; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <option value="">Select Part Category</option>
+            <option value="Exterior Accessories">Exterior Accessories</option>
+            <option value="Interior Accessories">Interior Accessories</option>
+            <option value="Lighting & Electrical">Lighting & Electrical</option>
+            <option value="Wheels & Tires">Wheels & Tires</option>
+            <option value="Body Parts">Body Parts</option>
+            <option value="Engine Parts">Engine Parts</option>
+            <option value="Suspension Parts">Suspension Parts</option>
+            <option value="Brakes">Brakes</option>
+            <option value="Filters">Filters</option>
+            <option value="Car Care Products">Car Care Products</option>
+            <option value="Performance Parts">Performance Parts</option>
+            <option value="Safety Accessories">Safety Accessories</option>
+          </select>
+          <button type="button" class="btn" onclick="performSearch()" style="background-color: #ef4444; color: white; padding: 14px 35px; font-size: 0.9rem; border-radius: 2px; font-weight: 600; border: none; min-width: 120px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); cursor: pointer;">Search</button>
+        </form>
+        <script>
+          const carData = {
+            "Cars": ["ELANTRA", "SONATA", "AZERA", "i30", "ACCENT", "i20", "i10"],
+            "Eco": ["IONIQ 6", "IONIQ 5", "KONA Electric"],
+            "SUV": ["PALISADE", "TUCSON", "SANTA FE", "KONA", "VENUE"],
+            "N": ["IONIQ 6 N", "IONIQ 5 N", "ELANTRA N", "i30 N", "i30 Fastback N", "i20 N"],
+            "N Line": ["IONIQ 6 N Line", "IONIQ 5 N Line", "TUCSON N Line", "ELANTRA N Line", "SONATA N Line", "KONA N Line", "i30 N Line", "i10 N Line"],
+            "MPV": ["STARIA"],
+            "Commercial": ["STARIA", "STARIA 11 Seater / Van", "H-1", "H-100"]
+          };
+          
+          function updateCars() {
+            const category = document.getElementById("modelCategory").value;
+            const carSelect = document.getElementById("carSelect");
+            
+            // Clear current options
+            carSelect.innerHTML = '<option value="">Select Car</option>';
+            
+            let carsToDisplay = [];
+            if (category === "All") {
+              // Combine all cars and remove duplicates
+              const allCars = new Set();
+              Object.values(carData).forEach(list => list.forEach(car => allCars.add(car)));
+              carsToDisplay = Array.from(allCars).sort();
+            } else if (carData[category]) {
+              carsToDisplay = carData[category];
+            }
+            
+            carsToDisplay.forEach(car => {
+              const option = document.createElement("option");
+              option.value = car;
+              option.textContent = car;
+              carSelect.appendChild(option);
+            });
+            
+            // Just reset the background to white to show it's interactive if there are cars
+            if (carsToDisplay.length > 0) {
+              carSelect.style.background = "#ffffff url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%23333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg>') no-repeat right 15px center";
+              carSelect.style.color = '#555';
+            } else {
+              carSelect.style.background = "#dcdedd url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%23555\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg>') no-repeat right 15px center";
+              carSelect.style.color = '#666';
+            }
+          }
+          
+          function performSearch() {
+            document.getElementById('featuredResults').style.display = 'none';
+            document.getElementById('searchResults').style.display = 'block';
+            
+            const selectedCategory = document.getElementById('partCategory').value;
+            const extSection = document.getElementById('exterior-accessories');
+            const intSection = document.getElementById('interior-accessories');
+            const engSection = document.getElementById('engine-parts');
+            const brkSection = document.getElementById('brakes-parts');
+            const perfSection = document.getElementById('performance-parts');
+            
+            extSection.style.display = 'none';
+            intSection.style.display = 'none';
+            if (engSection) engSection.style.display = 'none';
+            if (brkSection) brkSection.style.display = 'none';
+            if (perfSection) perfSection.style.display = 'none';
+            
+            if (selectedCategory === "Interior Accessories") {
+              intSection.style.display = 'block';
+            } else if (selectedCategory === "Exterior Accessories") {
+              extSection.style.display = 'block';
+            } else if (selectedCategory === "Engine Parts") {
+              if (engSection) engSection.style.display = 'block';
+            } else if (selectedCategory === "Brakes") {
+              if (brkSection) brkSection.style.display = 'block';
+            } else if (selectedCategory === "Performance Parts") {
+              if (perfSection) perfSection.style.display = 'block';
+            } else {
+              extSection.style.display = 'block';
+              intSection.style.display = 'block';
+              if (engSection) engSection.style.display = 'block';
+              if (brkSection) brkSection.style.display = 'block';
+              if (perfSection) perfSection.style.display = 'block';
+            }
+            
+            document.getElementById('searchResults').scrollIntoView({ behavior: 'smooth' });
+          }
+          
+          function goToCategory(catName) {
+            document.getElementById('partCategory').value = catName;
+            performSearch();
+          }
+          
+          // Initialize on load
+          document.addEventListener('DOMContentLoaded', updateCars);
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS (Initial State) -->
+  <section id="featuredResults" class="categories-section" style="padding: 4rem 0 2rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">TRENDING</span>
+        <h2 class="section-title">Featured Accessories</h2>
+      </div>
+      <div class="visual-category-grid">
+        <a href="javascript:void(0)" onclick="goToCategory('Exterior Accessories')" class="visual-card">
+          <img src="media/alloy_wheels.png" alt="Alloy Wheels">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Alloy Wheels</h3>
+            <span class="visual-card-btn">View Exterior</span>
+          </div>
+        </a>
+        <a href="javascript:void(0)" onclick="goToCategory('Exterior Accessories')" class="visual-card">
+          <img src="media/led_lights.png" alt="LED Lighting">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">LED Lighting</h3>
+            <span class="visual-card-btn">View Exterior</span>
+          </div>
+        </a>
+        <a href="javascript:void(0)" onclick="goToCategory('Interior Accessories')" class="visual-card">
+          <img src="media/seat_covers.png" alt="Leather Seat Covers">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Leather Seat Covers</h3>
+            <span class="visual-card-btn">View Interior</span>
+          </div>
+        </a>
+        <a href="javascript:void(0)" onclick="goToCategory('Engine Parts')" class="visual-card">
+          <img src="media/turbocharger.png" alt="Turbochargers">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Turbochargers</h3>
+            <span class="visual-card-btn">View Engine Parts</span>
+          </div>
+        </a>
+        <a href="javascript:void(0)" onclick="goToCategory('Brakes')" class="visual-card">
+          <img src="media/brake_roters.jpeg" alt="Brake Rotors">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Brake Rotors</h3>
+            <span class="visual-card-btn">View Brakes</span>
+          </div>
+        </a>
+        <a href="javascript:void(0)" onclick="goToCategory('Performance Parts')" class="visual-card">
+          <img src="media/cold air intake.webp" alt="Cold Air Intake">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Cold Air Intake</h3>
+            <span class="visual-card-btn">View Performance Parts</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH RESULTS WRAPPER -->
+  <div id="searchResults" style="display: none;">
+
+  <!-- EXTERIOR ACCESSORIES CATALOG -->
+  <section class="categories-section" id="exterior-accessories" style="padding: 4rem 0 2rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">CATALOG</span>
+        <h2 class="section-title">Exterior Accessories</h2>
+      </div>
+      
+      <div class="visual-category-grid">
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/alloy_wheels.png" alt="Alloy Wheels">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Alloy Wheels</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+        
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/roof_rack.png" alt="Roof Rails">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Roof Carriers</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/bumper_guard.png" alt="Bumper Guards">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Bumper Guards</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/parts.jpeg" alt="Chrome Garnish">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Chrome Garnish</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/led_lights.png" alt="LED Lighting">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">LED Lighting</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/mud_flaps.png" alt="Mud Flaps">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Mud Flaps</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERIOR ACCESSORIES CATALOG -->
+  <section class="categories-section" id="interior-accessories" style="padding: 0 0 4rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">CATALOG</span>
+        <h2 class="section-title">Interior Accessories</h2>
+      </div>
+      
+      <div class="visual-category-grid">
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/floor_mats.png" alt="Premium Floor Mats">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Premium Floor Mats</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+        
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/seat_covers.png" alt="Leather Seat Covers">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Leather Seat Covers</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/ambient_lighting.png" alt="Ambient Lighting">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Ambient Lighting</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/dash_cam.png" alt="Dashboard Camera">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Dashboard Camera</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/screen_protector.png" alt="Touchscreen Protector">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Screen Protectors</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/wireless_charger.png" alt="Wireless Charger Mount">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Wireless Chargers</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGINE PARTS CATALOG -->
+  <section class="categories-section" id="engine-parts" style="padding: 0 0 4rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">CATALOG</span>
+        <h2 class="section-title">Engine Parts</h2>
+      </div>
+      
+      <div class="visual-category-grid">
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/engine_air_filter.png" alt="Air Filter">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Air Filters</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+        
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/spark_plugs.png" alt="Spark Plugs">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Spark Plugs</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/engine_mount.png" alt="Engine Mounts">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Engine Mounts</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/turbocharger.png" alt="Turbochargers">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Turbochargers</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/starter_motor.png" alt="Starter Motors">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Starter Motors</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/alternator.png" alt="Alternators">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Alternators</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAKES CATALOG -->
+  <section class="categories-section" id="brakes-parts" style="padding: 0 0 4rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">CATALOG</span>
+        <h2 class="section-title">Brake Parts & Accessories</h2>
+      </div>
+      
+      <div class="visual-category-grid">
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/brake_pads.jpeg" alt="Brake Pads">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Brake Pads</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+        
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/brake_roters.jpeg" alt="Brake Discs (Rotors)">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Brake Rotors</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/braek_calippers.jpeg" alt="Brake Calipers">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Brake Calipers</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/Hand_Brake_Lever.jpeg" alt="Hand Brake Lever">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Hand Brake Lever</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/brake_fluid.jpeg" alt="Brake Fluid">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Brake Fluid</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/ABS_modules.jpeg" alt="ABS Control Module">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">ABS Modules</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERFORMANCE PARTS CATALOG -->
+  <section class="categories-section" id="performance-parts" style="padding: 0 0 4rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">CATALOG</span>
+        <h2 class="section-title">Performance Parts</h2>
+      </div>
+      
+      <div class="visual-category-grid">
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/cold air intake.webp" alt="Cold Air Intake">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Cold Air Intake</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+        
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/Exhaust.jpg" alt="Performance Exhaust">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Exhaust Systems</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/coilover-system.webp" alt="Coilover Kit">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Coilovers</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/short-shifter.jpg" alt="Short Shifter">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Short Shifters</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/ecu tunes.webp" alt="ECU Remap">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">ECU Tunes</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+
+        <a href="contact.html#send-message" class="visual-card">
+          <img src="media/carbon spoilers.jpg" alt="Carbon Fiber Spoiler">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">Carbon Spoilers</h3>
+            <span class="visual-card-btn">Shop Now</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <div class="logo-area">
+          <img src="media/logo.png" alt="Autyzone Logo" class="brand-logo-footer">
+        </div>
+        <p class="footer-desc">Autyzone is more than a trading company — we are building a technology driven automotive network designed for speed, accuracy, and long term scalability.</p>
+      </div>
+      
+      <div class="footer-col">
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="parts.html">Automotive Parts Supply</a></li>
+          <li><a href="wholesale.html">B2B Wholesale Solutions</a></li>
+          <li><a href="vehicle.html">Vehicle Sales</a></li>
+          <li><a href="tech.html">Tech Driven Operations</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#contact">Contact Support</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col" id="contact">
+        <h4 class="footer-heading">Contact Us</h4>
+        <ul class="footer-links contact-links">
+          <li>📞 +1 800 123 4567</li>
+          <li>✉️ support@autyzone.com</li>
+          <li>📍 Global Operations</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container flex-between">
+        <p>&copy; 2026 AUTYZONE LLC. All rights reserved.</p>
+        <p>A Technology Driven Automotive Network</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
