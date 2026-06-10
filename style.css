@@ -2368,3 +2368,17 @@ h6 {
     width: 150px !important;
   }
 }
+
+/* Wholesale Responsive Grid */
+.ws-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+@media (max-width: 768px) {
+  .ws-split-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
