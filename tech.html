@@ -51,9 +51,11 @@
     
     <!-- Background Video -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; pointer-events: none;">
-      <!-- Increased scale to hide YouTube branding edges -->
-      <iframe src="https://www.youtube.com/embed/_zGmPl2HQWE?autoplay=1&mute=1&loop=1&playlist=_zGmPl2HQWE&controls=0&showinfo=0&rel=0&playsinline=1" frameborder="0" style="position: absolute; top: 50%; left: 50%; width: 100vw; height: 100vh; transform: translate(-50%, -50%) scale(1.2); pointer-events: none;" allow="autoplay; encrypted-media; fullscreen"></iframe>
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);"></div>
+      <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%); z-index: 0; object-fit: cover; pointer-events: none;">
+        <source src="media/More Than A Ride.mp4" type="video/mp4">
+      </video>
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%); z-index: 1;"></div>
+    </div>
     </div>
 
     <div class="container" style="width: 100%; position: relative; z-index: 1;">
