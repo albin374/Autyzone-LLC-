@@ -2246,32 +2246,43 @@ h6 {
   }
 
   .nav-container.active {
-    background-color: rgba(10, 15, 25, 0.98);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 5%;
+    background-color: rgba(10, 15, 25, 0.98);
+    padding: 0 5%;
     box-sizing: border-box;
+    border-radius: 0;
+    margin-top: 0;
+    padding-bottom: 2rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.8);
     z-index: 1000;
+  }
+
+  .nav-container.active .logo-area,
+  .nav-container.active .mobile-menu-btn {
+    height: 95px;
+    display: flex;
+    align-items: center;
+    margin: 0;
   }
 
   .nav-container.active .mobile-menu-btn svg line {
     transition: all 0.3s ease;
     transform-origin: center;
   }
-  
   .nav-container.active .mobile-menu-btn svg line:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
+    opacity: 0;
   }
   .nav-container.active .mobile-menu-btn svg line:nth-child(2) {
-    opacity: 0;
+    transform: translateY(6px) rotate(45deg);
   }
   .nav-container.active .mobile-menu-btn svg line:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
   }
 
+  .nav-container.active .nav-links > a, .nav-container.active .dropbtn { text-align: center !important; width: 100%; display: block; }
   .nav-container.active .nav-links {
     display: flex !important;
     flex-direction: column;
@@ -2279,7 +2290,7 @@ h6 {
     justify-content: center;
     width: 100%;
     order: 3;
-    padding-top: 2rem;
+    padding-top: 1rem;
     gap: 1.5rem;
   }
 
@@ -2305,15 +2316,21 @@ h6 {
     padding-top: 1rem;
     border: none;
     width: 100%;
+      transform: none !important;
   }
 
   .nav-container.active .dropdown-content a {
     white-space: normal;
     padding: 0.8rem 1rem;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    text-align: center !important;
+    justify-content: center;
   }
 
-  .nav-container.active .dropdown:hover .dropdown-content,
-  .nav-container.active .dropdown:focus-within .dropdown-content {
+  .nav-container.active .dropdown.open .dropdown-content {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
