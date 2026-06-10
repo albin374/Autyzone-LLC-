@@ -2338,3 +2338,33 @@ h6 {
     justify-content: center;
   }
 }
+
+/* Mobile Testimonials Fix */
+@media (max-width: 768px) {
+  .testimonial-slider {
+    height: 380px !important;
+  }
+  
+  .testimonial-body {
+    gap: 0.5rem !important;
+  }
+  
+  .quote-mark {
+    font-size: 3.5rem !important;
+  }
+  
+  .testimonial-text {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    max-width: 85% !important;
+  }
+  
+  .testimonial-indicators {
+    gap: 3rem !important;
+    margin-top: 1rem !important;
+  }
+  
+  .indicator-line {
+    width: 150px !important;
+  }
+}
