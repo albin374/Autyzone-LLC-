@@ -31,21 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
     container.appendChild(particle);
   }
 });
-
-
-// Dropdown toggle logic for mobile
+// Dropdown toggle logic
 document.addEventListener('DOMContentLoaded', () => {
   const dropdowns = document.querySelectorAll('.dropdown');
-  
   dropdowns.forEach(dropdown => {
     const dropbtn = dropdown.querySelector('.dropbtn');
     if (dropbtn) {
       dropbtn.addEventListener('click', (e) => {
-        // Only toggle on mobile view when nav is active
-        if (window.innerWidth <= 768) {
-          e.preventDefault(); // Prevent default anchor jump
-          dropdown.classList.toggle('open');
-        }
+        e.preventDefault();
+        dropdown.classList.toggle('open');
       });
     }
   });

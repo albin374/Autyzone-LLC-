@@ -2331,7 +2331,7 @@ h6 {
   }
 
   .nav-container.active .dropdown.open .dropdown-content {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
