@@ -6,7 +6,7 @@
   <title>Automotive Parts Supply | AUTYZONE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
   <header class="navbar">
     <div class="nav-container">
       <div class="logo-area">
-        <a href="index.html"><img src="media/logo.png" alt="Autyzone Logo" class="brand-logo"></a>
+        <a href="index.html"><img src="media/logo2.png" alt="Autyzone Logo" class="brand-logo"></a>
       </div>
       <nav class="nav-links">
         <a href="index.html#home">Home</a>
@@ -29,7 +29,7 @@
             <a href="tech.html">Tech Driven Operations</a>
           </div>
         </div>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" style="display:none;">Contact</a>
       </nav>
       <div class="nav-actions">
         <a href="contact.html" class="btn btn-primary btn-shop-now">CONTACT US</a>
@@ -38,7 +38,7 @@
   </header>
 
   <!-- PAGE BANNER -->
-  <section class="page-banner" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url('media/parts.jpeg'); background-size: cover; background-position: center; height: 60vh; min-height: 450px; display: flex; align-items: center; justify-content: center; padding-top: 95px;">
+  <section class="page-banner" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url('media/parts.jpeg'); background-size: cover; background-position: center; height: 40vh; min-height: 300px; display: flex; align-items: center; justify-content: center; padding-top: 95px;">
     <div class="container" style="width: 100%; text-align: center;">
       <div style="max-width: 1000px; margin: 0 auto;">
         <h1 style="font-size: 2.8rem; color: white; font-family: var(--font-body); font-weight: 700; text-transform: capitalize; text-shadow: 0 2px 10px rgba(0,0,0,0.8); margin-bottom: 0.5rem;">
@@ -46,132 +46,7 @@
         </h1>
         <p style="font-size: 1rem; color: #e0e0e0; margin-bottom: 2.5rem; text-shadow: 0 1px 5px rgba(0,0,0,0.8); font-weight: 500;">Over hundreds of brands and tens of thousands of parts</p>
         
-        <form class="part-search-form" style="display: flex; gap: 10px; background: transparent; flex-wrap: wrap; justify-content: center;">
-          <select style="flex: 1; min-width: 160px; padding: 14px 15px; border: none; border-radius: 2px; font-size: 0.9rem; color: #666; appearance: none; background: #dcdedd url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%23555\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg>') no-repeat right 15px center; background-size: 12px; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-            <option value="">Select Make</option>
-            <option value="Hyundai">Hyundai</option>
-          </select>
-          <select id="modelCategory" onchange="updateCars()" style="flex: 1; min-width: 160px; padding: 14px 15px; border: none; border-radius: 2px; font-size: 0.9rem; color: #666; appearance: none; background: #ffffff url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%23555\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg>') no-repeat right 15px center; background-size: 12px; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2); cursor: pointer;">
-            <option value="All">Select Model (All)</option>
-            <option value="Cars">Cars</option>
-            <option value="Eco">Eco</option>
-            <option value="SUV">SUV</option>
-            <option value="N">N</option>
-            <option value="N Line">N Line</option>
-            <option value="MPV">MPV</option>
-            <option value="Commercial">Commercial</option>
-          </select>
-          <select id="carSelect" style="flex: 1; min-width: 160px; padding: 14px 15px; border: none; border-radius: 2px; font-size: 0.9rem; color: #666; appearance: none; background: #dcdedd url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%23555\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg>') no-repeat right 15px center; background-size: 12px; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2); cursor: pointer;">
-            <option value="">Select Car</option>
-          </select>
-          <select id="partCategory" style="flex: 1; min-width: 160px; padding: 14px 15px; border: none; border-radius: 2px; font-size: 0.9rem; color: #555; appearance: none; background: #ffffff url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%23333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg>') no-repeat right 15px center; background-size: 12px; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-            <option value="">Select Part Category</option>
-            <option value="Exterior Accessories">Exterior Accessories</option>
-            <option value="Interior Accessories">Interior Accessories</option>
-            <option value="Lighting & Electrical">Lighting & Electrical</option>
-            <option value="Wheels & Tires">Wheels & Tires</option>
-            <option value="Body Parts">Body Parts</option>
-            <option value="Engine Parts">Engine Parts</option>
-            <option value="Suspension Parts">Suspension Parts</option>
-            <option value="Brakes">Brakes</option>
-            <option value="Filters">Filters</option>
-            <option value="Car Care Products">Car Care Products</option>
-            <option value="Performance Parts">Performance Parts</option>
-            <option value="Safety Accessories">Safety Accessories</option>
-          </select>
-          <button type="button" class="btn" onclick="performSearch()" style="background-color: #ef4444; color: white; padding: 14px 35px; font-size: 0.9rem; border-radius: 2px; font-weight: 600; border: none; min-width: 120px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); cursor: pointer;">Search</button>
-        </form>
-        <script>
-          const carData = {
-            "Cars": ["ELANTRA", "SONATA", "AZERA", "i30", "ACCENT", "i20", "i10"],
-            "Eco": ["IONIQ 6", "IONIQ 5", "KONA Electric"],
-            "SUV": ["PALISADE", "TUCSON", "SANTA FE", "KONA", "VENUE"],
-            "N": ["IONIQ 6 N", "IONIQ 5 N", "ELANTRA N", "i30 N", "i30 Fastback N", "i20 N"],
-            "N Line": ["IONIQ 6 N Line", "IONIQ 5 N Line", "TUCSON N Line", "ELANTRA N Line", "SONATA N Line", "KONA N Line", "i30 N Line", "i10 N Line"],
-            "MPV": ["STARIA"],
-            "Commercial": ["STARIA", "STARIA 11 Seater / Van", "H-1", "H-100"]
-          };
-          
-          function updateCars() {
-            const category = document.getElementById("modelCategory").value;
-            const carSelect = document.getElementById("carSelect");
-            
-            // Clear current options
-            carSelect.innerHTML = '<option value="">Select Car</option>';
-            
-            let carsToDisplay = [];
-            if (category === "All") {
-              // Combine all cars and remove duplicates
-              const allCars = new Set();
-              Object.values(carData).forEach(list => list.forEach(car => allCars.add(car)));
-              carsToDisplay = Array.from(allCars).sort();
-            } else if (carData[category]) {
-              carsToDisplay = carData[category];
-            }
-            
-            carsToDisplay.forEach(car => {
-              const option = document.createElement("option");
-              option.value = car;
-              option.textContent = car;
-              carSelect.appendChild(option);
-            });
-            
-            // Just reset the background to white to show it's interactive if there are cars
-            if (carsToDisplay.length > 0) {
-              carSelect.style.background = "#ffffff url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%23333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg>') no-repeat right 15px center";
-              carSelect.style.color = '#555';
-            } else {
-              carSelect.style.background = "#dcdedd url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%23555\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg>') no-repeat right 15px center";
-              carSelect.style.color = '#666';
-            }
-          }
-          
-          function performSearch() {
-            document.getElementById('featuredResults').style.display = 'none';
-            document.getElementById('searchResults').style.display = 'block';
-            
-            const selectedCategory = document.getElementById('partCategory').value;
-            const extSection = document.getElementById('exterior-accessories');
-            const intSection = document.getElementById('interior-accessories');
-            const engSection = document.getElementById('engine-parts');
-            const brkSection = document.getElementById('brakes-parts');
-            const perfSection = document.getElementById('performance-parts');
-            
-            extSection.style.display = 'none';
-            intSection.style.display = 'none';
-            if (engSection) engSection.style.display = 'none';
-            if (brkSection) brkSection.style.display = 'none';
-            if (perfSection) perfSection.style.display = 'none';
-            
-            if (selectedCategory === "Interior Accessories") {
-              intSection.style.display = 'block';
-            } else if (selectedCategory === "Exterior Accessories") {
-              extSection.style.display = 'block';
-            } else if (selectedCategory === "Engine Parts") {
-              if (engSection) engSection.style.display = 'block';
-            } else if (selectedCategory === "Brakes") {
-              if (brkSection) brkSection.style.display = 'block';
-            } else if (selectedCategory === "Performance Parts") {
-              if (perfSection) perfSection.style.display = 'block';
-            } else {
-              extSection.style.display = 'block';
-              intSection.style.display = 'block';
-              if (engSection) engSection.style.display = 'block';
-              if (brkSection) brkSection.style.display = 'block';
-              if (perfSection) perfSection.style.display = 'block';
-            }
-            
-            document.getElementById('searchResults').scrollIntoView({ behavior: 'smooth' });
-          }
-          
-          function goToCategory(catName) {
-            document.getElementById('partCategory').value = catName;
-            performSearch();
-          }
-          
-          // Initialize on load
-          document.addEventListener('DOMContentLoaded', updateCars);
-        </script>
+        
       </div>
     </div>
   </section>
@@ -181,177 +56,127 @@
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">TRENDING</span>
-        <h2 class="section-title">Featured Accessories</h2>
+        <h2 class="section-title">Featured Parts</h2>
+        <p class="featured-subtitle" style="margin-top: 1rem; color: #555; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">We can supply all product lines (More than 100,000) for Hyundai and KIA vehicles.</p>
       </div>
       <div class="visual-category-grid">
-        <a href="javascript:void(0)" onclick="goToCategory('Exterior Accessories')" class="visual-card">
-          <img src="media/alloy_wheels.png" alt="Alloy Wheels">
+        <a href="#body-parts" class="visual-card">
+          <img src="media/fob_smart_key_1781064190734.png" alt="FOB-SMART KEY">
           <div class="visual-card-content">
-            <h3 class="visual-card-title">Alloy Wheels</h3>
-            <span class="visual-card-btn">View Exterior</span>
+            <h3 class="visual-card-title">FOB-SMART KEY</h3>
+            <span class="visual-card-btn">View Body Parts</span>
           </div>
         </a>
-        <a href="javascript:void(0)" onclick="goToCategory('Exterior Accessories')" class="visual-card">
-          <img src="media/led_lights.png" alt="LED Lighting">
+        <a href="#brakes" class="visual-card">
+          <img src="media/brake_pads.jpeg" alt="Brake pad">
           <div class="visual-card-content">
-            <h3 class="visual-card-title">LED Lighting</h3>
-            <span class="visual-card-btn">View Exterior</span>
-          </div>
-        </a>
-        <a href="javascript:void(0)" onclick="goToCategory('Interior Accessories')" class="visual-card">
-          <img src="media/seat_covers.png" alt="Leather Seat Covers">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">Leather Seat Covers</h3>
-            <span class="visual-card-btn">View Interior</span>
-          </div>
-        </a>
-        <a href="javascript:void(0)" onclick="goToCategory('Engine Parts')" class="visual-card">
-          <img src="media/turbocharger.png" alt="Turbochargers">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">Turbochargers</h3>
-            <span class="visual-card-btn">View Engine Parts</span>
-          </div>
-        </a>
-        <a href="javascript:void(0)" onclick="goToCategory('Brakes')" class="visual-card">
-          <img src="media/brake_roters.jpeg" alt="Brake Rotors">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">Brake Rotors</h3>
+            <h3 class="visual-card-title">Brake pad</h3>
             <span class="visual-card-btn">View Brakes</span>
           </div>
         </a>
-        <a href="javascript:void(0)" onclick="goToCategory('Performance Parts')" class="visual-card">
-          <img src="media/cold air intake.webp" alt="Cold Air Intake">
+        <a href="#engine-parts" class="visual-card">
+          <img src="media/spark_plugs.png" alt="PLUG ASSY-SPARK">
           <div class="visual-card-content">
-            <h3 class="visual-card-title">Cold Air Intake</h3>
-            <span class="visual-card-btn">View Performance Parts</span>
+            <h3 class="visual-card-title">PLUG ASSY-SPARK</h3>
+            <span class="visual-card-btn">View Engine Parts</span>
           </div>
         </a>
-      </div>
-    </div>
+        <a href="#body-parts" class="visual-card">
+          <img src="media/hood_panel_1781064204504.png" alt="PANEL ASSY-HOOD">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">PANEL ASSY-HOOD</h3>
+            <span class="visual-card-btn">View Body Parts</span>
+          </div>
+        </a>
+        <a href="#body-parts" class="visual-card">
+          <img src="media/bumper_cover_1781064217724.png" alt="COVER-RR BUMPER">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">COVER-RR BUMPER</h3>
+            <span class="visual-card-btn">View Body Parts</span>
+          </div>
+        </a>
+        <a href="#engine-parts" class="visual-card">
+          <img src="media/oil_seal_1781064230039.png" alt="SEAL-OIL">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">SEAL-OIL</h3>
+            <span class="visual-card-btn">View Engine Parts</span>
+          </div>
+        </a>
+        <a href="#engine-parts" class="visual-card">
+          <img src="media/oil_pump_1781064251643.png" alt="PUMP ASSY-OIL">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">PUMP ASSY-OIL</h3>
+            <span class="visual-card-btn">View Engine Parts</span>
+          </div>
+        </a>
+        <a href="#transmission" class="visual-card">
+          <img src="media/transmission_1781064264259.png" alt="TRANSMISSION">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">TRANSMISSION</h3>
+            <span class="visual-card-btn">View Transmission</span>
+          </div>
+        </a>
+        <a href="#body-parts" class="visual-card">
+          <img src="media/headlining_1781064443248.png" alt="HEADLINING ASSY-FRONT">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">HEADLINING ASSY-FRONT</h3>
+            <span class="visual-card-btn">View Body Parts</span>
+          </div>
+        </a>
+        <a href="#body-parts" class="visual-card">
+          <img src="media/door_trim_1781064419153.png" alt="PANEL COMPL-FRONT DOOR TRIM,RH">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">PANEL COMPL-FRONT DOOR TRIM,RH</h3>
+            <span class="visual-card-btn">View Body Parts</span>
+          </div>
+        </a>
+        <a href="#engine-parts" class="visual-card">
+          <img src="media/cooler_assy_1781064291440.png" alt="COOLER ASSY">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">COOLER ASSY</h3>
+            <span class="visual-card-btn">View Engine Parts</span>
+          </div>
+        </a>
+        <a href="#body-parts" class="visual-card">
+          <img src="media/window_panel_1781064429383.png" alt="PANEL-WINDOW,LH">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">PANEL-WINDOW,LH</h3>
+            <span class="visual-card-btn">View Body Parts</span>
+          </div>
+        </a>
+        <a href="#lighting-and-electrical" class="visual-card">
+          <img src="media/battery_assy_1781064277968.png" alt="BATTERY ASSY">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">BATTERY ASSY</h3>
+            <span class="visual-card-btn">View Lighting & Electrical</span>
+          </div>
+        </a>
+        <a href="#engine-parts" class="visual-card">
+          <img src="media/engine_assy_1781065793171.png" alt="ENGINE ASSEMBLY">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">ENGINE ASSEMBLY</h3>
+            <span class="visual-card-btn">View Engine Parts</span>
+          </div>
+        </a>
+        <a href="#transmission" class="visual-card">
+          <img src="media/axle_assy_1781065803925.png" alt="AXLE ASSEMBLY">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">AXLE ASSEMBLY</h3>
+            <span class="visual-card-btn">View Transmission</span>
+          </div>
+        </a>
+        <a href="#filters" class="visual-card">
+          <img src="media/cabin_filter_1781065816476.png" alt="CABIN FILTER">
+          <div class="visual-card-content">
+            <h3 class="visual-card-title">CABIN FILTER</h3>
+            <span class="visual-card-btn">View Filters</span>
+          </div>
+        </a>
+      </div></div>
   </section>
 
   <!-- SEARCH RESULTS WRAPPER -->
-  <div id="searchResults" style="display: none;">
-
-  <!-- EXTERIOR ACCESSORIES CATALOG -->
-  <section class="categories-section" id="exterior-accessories" style="padding: 4rem 0 2rem;">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">CATALOG</span>
-        <h2 class="section-title">Exterior Accessories</h2>
-      </div>
-      
-      <div class="visual-category-grid">
-        <a href="contact.html#send-message" class="visual-card">
-          <img src="media/alloy_wheels.png" alt="Alloy Wheels">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">Alloy Wheels</h3>
-            <span class="visual-card-btn">Shop Now</span>
-          </div>
-        </a>
-        
-        <a href="contact.html#send-message" class="visual-card">
-          <img src="media/roof_rack.png" alt="Roof Rails">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">Roof Carriers</h3>
-            <span class="visual-card-btn">Shop Now</span>
-          </div>
-        </a>
-
-        <a href="contact.html#send-message" class="visual-card">
-          <img src="media/bumper_guard.png" alt="Bumper Guards">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">Bumper Guards</h3>
-            <span class="visual-card-btn">Shop Now</span>
-          </div>
-        </a>
-
-        <a href="contact.html#send-message" class="visual-card">
-          <img src="media/parts.jpeg" alt="Chrome Garnish">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">Chrome Garnish</h3>
-            <span class="visual-card-btn">Shop Now</span>
-          </div>
-        </a>
-
-        <a href="contact.html#send-message" class="visual-card">
-          <img src="media/led_lights.png" alt="LED Lighting">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">LED Lighting</h3>
-            <span class="visual-card-btn">Shop Now</span>
-          </div>
-        </a>
-
-        <a href="contact.html#send-message" class="visual-card">
-          <img src="media/mud_flaps.png" alt="Mud Flaps">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">Mud Flaps</h3>
-            <span class="visual-card-btn">Shop Now</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- INTERIOR ACCESSORIES CATALOG -->
-  <section class="categories-section" id="interior-accessories" style="padding: 0 0 4rem;">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">CATALOG</span>
-        <h2 class="section-title">Interior Accessories</h2>
-      </div>
-      
-      <div class="visual-category-grid">
-        <a href="contact.html#send-message" class="visual-card">
-          <img src="media/floor_mats.png" alt="Premium Floor Mats">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">Premium Floor Mats</h3>
-            <span class="visual-card-btn">Shop Now</span>
-          </div>
-        </a>
-        
-        <a href="contact.html#send-message" class="visual-card">
-          <img src="media/seat_covers.png" alt="Leather Seat Covers">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">Leather Seat Covers</h3>
-            <span class="visual-card-btn">Shop Now</span>
-          </div>
-        </a>
-
-        <a href="contact.html#send-message" class="visual-card">
-          <img src="media/ambient_lighting.png" alt="Ambient Lighting">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">Ambient Lighting</h3>
-            <span class="visual-card-btn">Shop Now</span>
-          </div>
-        </a>
-
-        <a href="contact.html#send-message" class="visual-card">
-          <img src="media/dash_cam.png" alt="Dashboard Camera">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">Dashboard Camera</h3>
-            <span class="visual-card-btn">Shop Now</span>
-          </div>
-        </a>
-
-        <a href="contact.html#send-message" class="visual-card">
-          <img src="media/screen_protector.png" alt="Touchscreen Protector">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">Screen Protectors</h3>
-            <span class="visual-card-btn">Shop Now</span>
-          </div>
-        </a>
-
-        <a href="contact.html#send-message" class="visual-card">
-          <img src="media/wireless_charger.png" alt="Wireless Charger Mount">
-          <div class="visual-card-content">
-            <h3 class="visual-card-title">Wireless Chargers</h3>
-            <span class="visual-card-btn">Shop Now</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+  <div id="searchResults">
 
   <!-- ENGINE PARTS CATALOG -->
   <section class="categories-section" id="engine-parts" style="padding: 0 0 4rem;">
@@ -366,7 +191,7 @@
           <img src="media/engine_air_filter.png" alt="Air Filter">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Air Filters</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
         
@@ -374,7 +199,7 @@
           <img src="media/spark_plugs.png" alt="Spark Plugs">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Spark Plugs</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
 
@@ -382,7 +207,7 @@
           <img src="media/engine_mount.png" alt="Engine Mounts">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Engine Mounts</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
 
@@ -390,7 +215,7 @@
           <img src="media/turbocharger.png" alt="Turbochargers">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Turbochargers</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
 
@@ -398,7 +223,7 @@
           <img src="media/starter_motor.png" alt="Starter Motors">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Starter Motors</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
 
@@ -406,7 +231,7 @@
           <img src="media/alternator.png" alt="Alternators">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Alternators</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
       </div>
@@ -418,7 +243,7 @@
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">CATALOG</span>
-        <h2 class="section-title">Brake Parts & Accessories</h2>
+        <h2 class="section-title">Brake Parts</h2>
       </div>
       
       <div class="visual-category-grid">
@@ -426,7 +251,7 @@
           <img src="media/brake_pads.jpeg" alt="Brake Pads">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Brake Pads</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
         
@@ -434,7 +259,7 @@
           <img src="media/brake_roters.jpeg" alt="Brake Discs (Rotors)">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Brake Rotors</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
 
@@ -442,7 +267,7 @@
           <img src="media/braek_calippers.jpeg" alt="Brake Calipers">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Brake Calipers</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
 
@@ -450,7 +275,7 @@
           <img src="media/Hand_Brake_Lever.jpeg" alt="Hand Brake Lever">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Hand Brake Lever</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
 
@@ -458,7 +283,7 @@
           <img src="media/brake_fluid.jpeg" alt="Brake Fluid">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Brake Fluid</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
 
@@ -466,7 +291,7 @@
           <img src="media/ABS_modules.jpeg" alt="ABS Control Module">
           <div class="visual-card-content">
             <h3 class="visual-card-title">ABS Modules</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
       </div>
@@ -486,7 +311,7 @@
           <img src="media/cold air intake.webp" alt="Cold Air Intake">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Cold Air Intake</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
         
@@ -494,7 +319,7 @@
           <img src="media/Exhaust.jpg" alt="Performance Exhaust">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Exhaust Systems</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
 
@@ -502,7 +327,7 @@
           <img src="media/coilover-system.webp" alt="Coilover Kit">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Coilovers</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
 
@@ -510,7 +335,7 @@
           <img src="media/short-shifter.jpg" alt="Short Shifter">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Short Shifters</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
 
@@ -518,7 +343,7 @@
           <img src="media/ecu tunes.webp" alt="ECU Remap">
           <div class="visual-card-content">
             <h3 class="visual-card-title">ECU Tunes</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
 
@@ -526,7 +351,7 @@
           <img src="media/carbon spoilers.jpg" alt="Carbon Fiber Spoiler">
           <div class="visual-card-content">
             <h3 class="visual-card-title">Carbon Spoilers</h3>
-            <span class="visual-card-btn">Shop Now</span>
+            <span class="visual-card-btn">View Details</span>
           </div>
         </a>
       </div>
@@ -539,9 +364,14 @@
     <div class="container footer-grid">
       <div class="footer-col brand-col">
         <div class="logo-area">
-          <img src="media/logo.png" alt="Autyzone Logo" class="brand-logo-footer">
+          <img src="media/logo2.png" alt="Autyzone Logo" class="brand-logo-footer">
         </div>
         <p class="footer-desc">Autyzone is more than a trading company — we are building a technology driven automotive network designed for speed, accuracy, and long term scalability.</p>
+        <div class="social-links" style="margin-top: 15px;">
+          <a href="https://linkedin.com/company/autyzone" target="_blank" style="color: white; margin-right: 15px; transition: color 0.3s;" onmouseover="this.style.color='#0a66c2'" onmouseout="this.style.color='white'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
       </div>
       
       <div class="footer-col">
@@ -566,9 +396,9 @@
       <div class="footer-col" id="contact">
         <h4 class="footer-heading">Contact Us</h4>
         <ul class="footer-links contact-links">
-          <li>📞 +1 800 123 4567</li>
-          <li>✉️ support@autyzone.com</li>
-          <li>📍 Global Operations</li>
+          <li>📞 544587980</li>
+          <li>✉️ Sales@autyzone.com</li>
+          <li>📍 Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, U.A.E.</li>
         </ul>
       </div>
     </div>
@@ -581,5 +411,10 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <a href="https://wa.me/971544587980" target="_blank" class="whatsapp-cta" style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; border-radius: 50px; padding: 10px 20px; font-weight: bold; font-family: var(--font-display, sans-serif); text-decoration: none; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    Chat
+  </a>
 </body>
 </html>

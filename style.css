@@ -11,9 +11,9 @@
   --text-muted: #8fa4c0;
   --yellow-accent: #ffd54f;
 
-  --font-display: 'Orbitron', sans-serif;
-  --font-body: 'Barlow', sans-serif;
-  --font-condensed: 'Barlow Condensed', sans-serif;
+  --font-display: 'DM Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-condensed: 'Manrope', sans-serif;
 }
 
 * {
@@ -121,13 +121,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .brand-logo {
-  height: 65px;
+  height: 90px;
   width: auto;
   object-fit: contain;
 }
 
 .brand-logo-footer {
-  height: 90px;
+  height: 120px;
   width: auto;
   object-fit: contain;
 }
@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-muted);
   position: relative;
   transition: color 0.3s ease;
-  font-size: 1.1rem;
+  font-size: 0.85rem;
 }
 
 .nav-links a:hover {
@@ -263,7 +263,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  animation: fadeBanner3 15s infinite;
+  animation: fadeBanner4 20s infinite;
 }
 
 .img-1 {
@@ -272,18 +272,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .img-2 {
   opacity: 0;
-  animation-delay: -10s;
+  animation-delay: -15s;
 }
 
 .img-3 {
   opacity: 0;
+  animation-delay: -10s;
+}
+
+.img-4 {
+  opacity: 0;
   animation-delay: -5s;
 }
 
-@keyframes fadeBanner3 {
+@keyframes fadeBanner4 {
   0%   { opacity: 1; }
-  23%  { opacity: 1; }
-  33%  { opacity: 0; }
+  15%  { opacity: 1; }
+  25%  { opacity: 0; }
   90%  { opacity: 0; }
   100% { opacity: 1; }
 }
@@ -1573,6 +1578,31 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: contain;
   filter: drop-shadow(0 15px 15px rgba(0,0,0,0.15));
 }
+
+.fp-shop-btn {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--red-accent, #ef4444);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.fp-card:hover .fp-shop-btn {
+  bottom: 20px;
+  opacity: 1;
+}
+
 .fp-actions {
   position: absolute;
   top: 1rem;
