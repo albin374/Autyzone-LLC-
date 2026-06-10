@@ -1,110 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>B2B Wholesale Solutions | AUTYZONE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    .ws-section { padding: 6rem 0; }
-    .ws-bg-dark { background-color: #0a0a0c; }
-    .ws-bg-light { background-color: #111114; }
-    .ws-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-    
-    .ws-card { 
-      background: rgba(16, 32, 70, 0.85); 
-      backdrop-filter: blur(12px);
-      padding: 2.5rem; 
-      border-radius: 12px; 
-      border: 1px solid rgba(255,255,255,0.05);
-      border-left: 4px solid var(--blue-glow, #4d94ff); 
-      transition: all 0.3s ease; 
+    .ws-section {
+      padding: 6rem 0;
     }
-    .ws-card:hover { 
-      transform: translateY(-5px); 
-      box-shadow: 0 15px 35px rgba(0,0,0,0.4); 
+
+    .ws-bg-dark {
+      background-color: #0a0a0c;
+    }
+
+    .ws-bg-light {
+      background-color: #111114;
+    }
+
+    .ws-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .ws-card {
+      background: rgba(16, 32, 70, 0.85);
+      backdrop-filter: blur(12px);
+      padding: 2.5rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-left: 4px solid var(--blue-glow, #4d94ff);
+      transition: all 0.3s ease;
+    }
+
+    .ws-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
       background: rgba(24, 46, 95, 0.95);
       border-left-color: var(--blue-bright, #2676f5);
     }
-    .ws-card-title { font-family: var(--font-display); font-size: 1.5rem; color: #fff; margin-bottom: 1rem; }
-    .ws-card-desc { color: #c4ccdf; line-height: 1.6; }
-    
-    .ws-step-card { 
-      text-align: center; 
+
+    .ws-card-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .ws-card-desc {
+      color: #c4ccdf;
+      line-height: 1.6;
+    }
+
+    .ws-step-card {
+      text-align: center;
       padding: 2.5rem;
       background: #1a1a1e;
       border-radius: 4px;
       position: relative;
     }
-    .ws-step-num { 
-      display: inline-flex; 
-      align-items: center; 
-      justify-content: center; 
-      width: 60px; 
-      height: 60px; 
-      border-radius: 50%; 
-      background: rgba(239, 68, 68, 0.1); 
-      color: var(--primary-color); 
-      font-size: 1.8rem; 
-      font-weight: 700; 
-      margin-bottom: 1.5rem; 
+
+    .ws-step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(239, 68, 68, 0.1);
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
       border: 1px solid rgba(239, 68, 68, 0.3);
     }
-    
-    .ws-cat-pill { 
-      display: inline-block; 
-      background: rgba(255, 255, 255, 0.05); 
-      color: #e0e0e0; 
-      padding: 1rem 2rem; 
-      border-radius: 40px; 
-      margin: 0.5rem; 
-      font-size: 1rem; 
-      font-weight: 500; 
-      border: 1px solid rgba(255, 255, 255, 0.1); 
+
+    .ws-cat-pill {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.05);
+      color: #e0e0e0;
+      padding: 1rem 2rem;
+      border-radius: 40px;
+      margin: 0.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       transition: all 0.3s;
     }
+
     .ws-cat-pill:hover {
       background: var(--primary-color);
       color: #fff;
       border-color: var(--primary-color);
     }
 
-    .faq-item { 
-      background: #1a1a1e; 
-      padding: 2rem; 
-      margin-bottom: 1.5rem; 
-      border-radius: 4px; 
-      border-left: 3px solid #333; 
+    .faq-item {
+      background: #1a1a1e;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+      border-left: 3px solid #333;
       transition: border-color 0.3s;
     }
+
     .faq-item:hover {
       border-left-color: var(--primary-color);
     }
-    .faq-q { font-weight: 600; font-size: 1.3rem; color: #fff; margin-bottom: 0.8rem; }
-    .faq-a { color: #a0a0a5; line-height: 1.6; }
-    
-    .hero-btns { display: flex; gap: 1rem; justify-content: center; margin-top: 2.5rem; flex-wrap: wrap; }
-    
-    .check-list { list-style: none; padding: 0; }
-    .check-list li { 
-      position: relative; 
-      padding-left: 30px; 
-      margin-bottom: 1rem; 
-      color: #e0e0e0; 
+
+    .faq-q {
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 0.8rem;
+    }
+
+    .faq-a {
+      color: #a0a0a5;
+      line-height: 1.6;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 1rem;
+      color: #e0e0e0;
       font-size: 1.1rem;
     }
-    .check-list li::before { 
-      content: '✓'; 
-      position: absolute; 
-      left: 0; 
-      color: var(--primary-color); 
-      font-weight: bold; 
+
+    .check-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+      font-weight: bold;
     }
   </style>
 </head>
+
 <body>
 
   <!-- STICKY HEADER / NAV -->
@@ -113,9 +165,10 @@
       <div class="logo-area">
         <a href="index.html"><img src="media/logo2.png" alt="Autyzone Logo" class="brand-logo"></a>
       </div>
-      
+
       <button class="mobile-menu-btn" onclick="this.parentElement.classList.toggle('active')">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -142,19 +195,25 @@
   </header>
 
   <!-- PAGE BANNER (HERO) -->
-  <section class="page-banner" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(10, 10, 12, 1) 100%), url('media/Dark_one_with_cars_ - Copy.jpeg'); background-size: cover; background-position: center; min-height: 65vh; display: flex; align-items: center; justify-content: center; padding-top: 95px; text-align: center;">
+  <section class="page-banner"
+    style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(10, 10, 12, 1) 100%), url('media/Dark_one_with_cars_ - Copy.jpeg'); background-size: cover; background-position: center; min-height: 65vh; display: flex; align-items: center; justify-content: center; padding-top: 95px; text-align: center;">
     <div class="container">
       <div style="max-width: 900px; margin: 0 auto;">
         <span class="eyebrow" style="margin-bottom: 1rem; display: block;">B2B WHOLESALE SOLUTIONS</span>
-        <h1 style="font-size: 3.5rem; color: white; font-family: var(--font-body); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem;">
+        <h1
+          style="font-size: 3.5rem; color: white; font-family: var(--font-body); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem;">
           Wholesale Hyundai & KIA Parts for Businesses
         </h1>
         <p style="font-size: 1.1rem; color: #ccc; line-height: 1.6; margin-bottom: 2rem;">
-          Partner with us for genuine Hyundai & KIA parts and bulk procurement solutions. We also supply Mazda, Ford, GM, Toyota & Geely. We help workshops, fleet operators, dealerships, and service centers source quality products at competitive prices.
+          Partner with us for genuine Hyundai & KIA parts and bulk procurement solutions. We also supply Mazda, Ford,
+          GM, Toyota & Geely. We help workshops, fleet operators, dealerships, and service centers source quality
+          products at competitive prices.
         </p>
         <div class="hero-btns">
           <a href="#contact" class="btn btn-primary" style="padding: 16px 35px; font-size: 1.1rem;">Become a Partner</a>
-          <a href="#contact" class="btn" style="background: rgba(255,255,255,0.1); color: white; padding: 16px 35px; border-radius: 2px; font-weight: 600; text-decoration: none; border: 1px solid rgba(255,255,255,0.2);">Request a Quote</a>
+          <a href="#contact" class="btn"
+            style="background: rgba(255,255,255,0.1); color: white; padding: 16px 35px; border-radius: 2px; font-weight: 600; text-decoration: none; border: 1px solid rgba(255,255,255,0.2);">Request
+            a Quote</a>
         </div>
       </div>
     </div>
@@ -170,30 +229,36 @@
       <div class="ws-grid">
         <div class="ws-card">
           <h3 class="ws-card-title">Genuine Hyundai & KIA Products</h3>
-          <p class="ws-card-desc">Access a wide range of genuine and high-quality Hyundai & KIA parts tailored to your business needs.</p>
+          <p class="ws-card-desc">Access a wide range of genuine and high-quality Hyundai & KIA parts tailored to your
+            business needs.</p>
         </div>
         <div class="ws-card">
           <h3 class="ws-card-title">Competitive Wholesale Pricing</h3>
-          <p class="ws-card-desc">Enjoy special pricing tiers and aggressive discounts specifically designed for bulk orders and long-term partners.</p>
+          <p class="ws-card-desc">Enjoy special pricing tiers and aggressive discounts specifically designed for bulk
+            orders and long-term partners.</p>
         </div>
         <div class="ws-card">
           <h3 class="ws-card-title">Fast Delivery</h3>
-          <p class="ws-card-desc">Reliable shipping and timely order fulfillment ensures your operations never slow down waiting for parts.</p>
+          <p class="ws-card-desc">Reliable shipping and timely order fulfillment ensures your operations never slow down
+            waiting for parts.</p>
         </div>
         <div class="ws-card">
           <h3 class="ws-card-title">Dedicated Support</h3>
-          <p class="ws-card-desc">Get direct assistance from our experienced B2B account team to resolve queries and streamline your procurement.</p>
+          <p class="ws-card-desc">Get direct assistance from our experienced B2B account team to resolve queries and
+            streamline your procurement.</p>
         </div>
         <div class="ws-card">
           <h3 class="ws-card-title">Easy Ordering</h3>
-          <p class="ws-card-desc">A simple, transparent online ordering and quotation process that saves you valuable time and effort.</p>
+          <p class="ws-card-desc">A simple, transparent online ordering and quotation process that saves you valuable
+            time and effort.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- WHO WE SERVE -->
-  <section class="ws-section ws-bg-light" style="background-image: linear-gradient(to right, rgba(17, 17, 20, 0.5), rgba(17, 17, 20, 0.4)), url('media/about.jpeg'); background-size: cover; background-position: center; background-attachment: fixed;">
+  <section class="ws-section ws-bg-light"
+    style="background-image: linear-gradient(to right, rgba(17, 17, 20, 0.5), rgba(17, 17, 20, 0.4)), url('media/about.jpeg'); background-size: cover; background-position: center; background-attachment: fixed;">
     <div class="container">
       <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
         <span class="eyebrow">OUR PARTNERS</span>
@@ -202,19 +267,23 @@
       <div class="ws-grid">
         <div class="ws-card" style="border-left: none; border-top: 3px solid var(--primary-color);">
           <h3 class="ws-card-title">Fleet Operators</h3>
-          <p class="ws-card-desc">Keep your fleet running efficiently with highly reliable parts and precisely scheduled supply chains.</p>
+          <p class="ws-card-desc">Keep your fleet running efficiently with highly reliable parts and precisely scheduled
+            supply chains.</p>
         </div>
         <div class="ws-card" style="border-left: none; border-top: 3px solid var(--primary-color);">
           <h3 class="ws-card-title">Garages & Workshops</h3>
-          <p class="ws-card-desc">Source parts quickly and accurately to dramatically reduce vehicle downtime for your customers.</p>
+          <p class="ws-card-desc">Source parts quickly and accurately to dramatically reduce vehicle downtime for your
+            customers.</p>
         </div>
         <div class="ws-card" style="border-left: none; border-top: 3px solid var(--primary-color);">
           <h3 class="ws-card-title">Service Centers</h3>
-          <p class="ws-card-desc">Ensure consistent, high-quality repairs with 100% genuine Hyundai & KIA components.</p>
+          <p class="ws-card-desc">Ensure consistent, high-quality repairs with 100% genuine Hyundai & KIA components.
+          </p>
         </div>
         <div class="ws-card" style="border-left: none; border-top: 3px solid var(--primary-color);">
           <h3 class="ws-card-title">Dealerships</h3>
-          <p class="ws-card-desc">Expand your parts inventory safely with our aggressive and highly competitive wholesale pricing.</p>
+          <p class="ws-card-desc">Expand your parts inventory safely with our aggressive and highly competitive
+            wholesale pricing.</p>
         </div>
       </div>
     </div>
@@ -223,7 +292,7 @@
   <!-- PRODUCT CATEGORIES & WHY CHOOSE US -->
   <section class="ws-section ws-bg-dark">
     <div class="container">
-      <div class="ws-split-grid">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
         <!-- CATEGORIES -->
         <div>
           <div class="section-header" style="margin-bottom: 2rem;">
@@ -237,8 +306,8 @@
             <span class="ws-cat-pill">Electrical Parts</span>
             <span class="ws-cat-pill">Filters</span>
             <span class="ws-cat-pill">Body Parts</span>
-            
-            
+
+
             <span class="ws-cat-pill">Performance Parts</span>
             <span class="ws-cat-pill">Wheels & Tires</span>
           </div>
@@ -264,7 +333,8 @@
   </section>
 
   <!-- WHOLESALE BENEFITS -->
-  <section class="ws-section" style="background-image: linear-gradient(rgba(8, 18, 45, 0.8), rgba(8, 18, 45, 0.9)), url('media/ws.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; position: relative;">
+  <section class="ws-section"
+    style="background-image: linear-gradient(rgba(8, 18, 45, 0.8), rgba(8, 18, 45, 0.9)), url('media/ws.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; position: relative;">
     <div class="container" style="position: relative; z-index: 2;">
       <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
         <span class="eyebrow">PROGRAM PERKS</span>
@@ -277,7 +347,8 @@
         </div>
         <div class="ws-card">
           <h3 class="ws-card-title">Credit Facilities</h3>
-          <p class="ws-card-desc">Flexible payment options and credit lines available for eligible business customers.</p>
+          <p class="ws-card-desc">Flexible payment options and credit lines available for eligible business customers.
+          </p>
         </div>
         <div class="ws-card">
           <h3 class="ws-card-title">Bulk Order Discounts</h3>
@@ -289,7 +360,8 @@
         </div>
         <div class="ws-card">
           <h3 class="ws-card-title">Inventory Availability</h3>
-          <p class="ws-card-desc">Unrestricted access to a massive, continually updated inventory of Hyundai & KIA parts.</p>
+          <p class="ws-card-desc">Unrestricted access to a massive, continually updated inventory of Hyundai & KIA
+            parts.</p>
         </div>
       </div>
     </div>
@@ -327,12 +399,15 @@
     </div>
   </section>
 
-    <!-- FAQ -->
+  <!-- FAQ -->
   <section class="ws-section" style="position: relative; overflow: hidden; color: white; padding: 6rem 0;">
-    <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+    <video autoplay loop muted playsinline
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
       <source src="media/7000 RPM .mp4" type="video/mp4">
     </video>
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1;"></div>
+    <div
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1;">
+    </div>
     <div class="container" style="position: relative; z-index: 2;">
       <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
         <span class="eyebrow">SUPPORT</span>
@@ -341,19 +416,23 @@
       <div style="max-width: 800px; margin: 0 auto;">
         <div class="faq-item">
           <h3 class="faq-q">Who can apply for a wholesale account?</h3>
-          <p class="faq-a">Fleet operators, garages, workshops, service centers, dealerships, and automotive businesses with valid operational documentation.</p>
+          <p class="faq-a">Fleet operators, garages, workshops, service centers, dealerships, and automotive businesses
+            with valid operational documentation.</p>
         </div>
         <div class="faq-item">
           <h3 class="faq-q">Is there a minimum order quantity?</h3>
-          <p class="faq-a">Minimum order requirements may vary depending on the product category. Contact your account manager for specifics.</p>
+          <p class="faq-a">Minimum order requirements may vary depending on the product category. Contact your account
+            manager for specifics.</p>
         </div>
         <div class="faq-item">
           <h3 class="faq-q">Do you offer bulk discounts?</h3>
-          <p class="faq-a">Yes, special escalating discounts are strictly available for high-volume and recurring purchases.</p>
+          <p class="faq-a">Yes, special escalating discounts are strictly available for high-volume and recurring
+            purchases.</p>
         </div>
         <div class="faq-item">
           <h3 class="faq-q">Can I request a custom quote?</h3>
-          <p class="faq-a">Yes, our B2B team can provide tailored quotations based on your precise requirements and expected volumes.</p>
+          <p class="faq-a">Yes, our B2B team can provide tailored quotations based on your precise requirements and
+            expected volumes.</p>
         </div>
       </div>
     </div>
@@ -366,14 +445,20 @@
         <div class="logo-area">
           <img src="media/logo2.png" alt="Autyzone Logo" class="brand-logo-footer">
         </div>
-        <p class="footer-desc">Autyzone is more than a trading company — we are building a technology driven automotive network designed for speed, accuracy, and long term scalability.</p>
+        <p class="footer-desc">Autyzone is more than a trading company — we are building a technology driven automotive
+          network designed for speed, accuracy, and long term scalability.</p>
         <div class="social-links" style="margin-top: 15px;">
-          <a href="https://linkedin.com/company/autyzone" target="_blank" style="color: white; margin-right: 15px; transition: color 0.3s;" onmouseover="this.style.color='#0a66c2'" onmouseout="this.style.color='white'">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <a href="https://linkedin.com/company/autyzone" target="_blank"
+            style="color: white; margin-right: 15px; transition: color 0.3s;" onmouseover="this.style.color='#0a66c2'"
+            onmouseout="this.style.color='white'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
           </a>
         </div>
       </div>
-      
+
       <div class="footer-col">
         <h4 class="footer-heading">Services</h4>
         <ul class="footer-links">
@@ -383,7 +468,7 @@
           <li><a href="tech.html">Tech Driven Operations</a></li>
         </ul>
       </div>
-      
+
       <div class="footer-col">
         <h4 class="footer-heading">Quick Links</h4>
         <ul class="footer-links">
@@ -392,7 +477,7 @@
           <li><a href="#">Terms & Conditions</a></li>
         </ul>
       </div>
-      
+
       <div class="footer-col" id="contact">
         <h4 class="footer-heading">Contact Us</h4>
         <ul class="footer-links contact-links">
@@ -412,9 +497,15 @@
 
   <script src="script.js"></script>
 
-  <a href="https://wa.me/971544587980" target="_blank" class="whatsapp-cta" style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; border-radius: 50px; padding: 10px 20px; font-weight: bold; font-family: var(--font-display, sans-serif); text-decoration: none; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  <a href="https://wa.me/971544587980" target="_blank" class="whatsapp-cta"
+    style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; border-radius: 50px; padding: 10px 20px; font-weight: bold; font-family: var(--font-display, sans-serif); text-decoration: none; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s ease;"
+    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+    </svg>
     Chat
   </a>
 </body>
+
 </html>
