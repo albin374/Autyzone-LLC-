@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>About Us | AUTYZONE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+  <!-- STICKY HEADER / NAV -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo-area">
+        <a href="index.html"><img src="media/logo2.png" alt="Autyzone Logo" class="brand-logo"></a>
+      </div>
+      
+      <button class="mobile-menu-btn" onclick="this.parentElement.classList.toggle('active')">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="about.html">About Us</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Products ▾</a>
+          <div class="dropdown-content">
+            <a href="parts.html">Automotive Parts Supply</a>
+            <a href="wholesale.html">B2B Wholesale Solutions</a>
+            <a href="vehicle.html">Vehicle Sales</a>
+            <a href="tech.html">Tech Driven Operations</a>
+          </div>
+        </div>
+
+      </nav>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary btn-shop-now">CONTACT US</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE BANNER (HERO) -->
+  <section class="page-banner" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(10, 10, 12, 1) 100%), url('media/about_hero.png'); background-size: cover; background-position: center; min-height: 50vh; display: flex; align-items: center; justify-content: center; padding-top: 95px; text-align: center;">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <span class="eyebrow" style="margin-bottom: 1rem; display: block;">OUR STORY</span>
+        <h1 style="font-size: 3.5rem; color: white; font-family: var(--font-body); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem;">
+          About Autyzone
+        </h1>
+        <p style="font-size: 1.1rem; color: #ccc; line-height: 1.6;">
+          A technology driven automotive network designed for speed, accuracy, and long term scalability.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT AREA -->
+  <main style="flex: 1;">
+    
+    <style>
+      .bg-slideshow {
+        opacity: 0;
+        animation: fade-bg 16s infinite;
+      }
+      .slide-1 { animation-delay: 0s; }
+      .slide-2 { animation-delay: 4s; }
+      .slide-3 { animation-delay: 8s; }
+      .slide-4 { animation-delay: 12s; }
+      @keyframes fade-bg {
+        0% { opacity: 0; transform: scale(1.05); }
+        10% { opacity: 1; transform: scale(1); }
+        25% { opacity: 1; transform: scale(1); }
+        35% { opacity: 0; transform: scale(1.05); }
+        100% { opacity: 0; }
+      }
+      
+      .about-service-card {
+        background: rgba(255,255,255,0.02); 
+        border: 1px solid rgba(255,255,255,0.05); 
+        padding: 2.5rem; 
+        border-radius: 12px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        backdrop-filter: blur(10px);
+        position: relative;
+        overflow: hidden;
+      }
+      .about-service-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 4px;
+        background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+        transform: scaleX(0);
+        transition: transform 0.4s ease;
+      }
+      .about-service-card:hover {
+        transform: translateY(-12px);
+        background: rgba(255,255,255,0.04);
+        border-color: rgba(229, 57, 53, 0.3);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(229, 57, 53, 0.15);
+      }
+      .about-service-card:hover::before {
+        transform: scaleX(1);
+      }
+    </style>
+
+    <!-- ABOUT US SECTION -->
+    <section style="position: relative; padding: 8rem 0; overflow: hidden;">
+      <!-- Background images -->
+      <div class="bg-slideshow slide-1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('media/kia.jpg') center/cover; z-index: 1;"></div>
+      <div class="bg-slideshow slide-2" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('media/kona.jpg') center/cover; z-index: 1;"></div>
+      <div class="bg-slideshow slide-3" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('media/palisade.png') center/cover; z-index: 1;"></div>
+      <div class="bg-slideshow slide-4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('media/SANTA%20FE2.jpg') center/cover; z-index: 1;"></div>
+      
+      <!-- Overlay -->
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 12, 0.85); z-index: 2;"></div>
+
+      <div class="container" style="position: relative; z-index: 3;">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+          <h2 class="section-title">Who We Are</h2>
+          <p style="color: #ccc; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            Autyzone LLC is an automotive solutions company built on a parts first philosophy. We operate a dual vertical model that combines automotive parts supply with a supporting vehicle sales division, creating a seamless ecosystem for businesses and consumers across regional and international markets.
+          </p>
+          <p style="color: #ccc; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            Our core strength lies in the wholesale and retail distribution of genuine and aftermarket automotive parts, supported by smart software, real time inventory visibility, and efficient supply chain operations. Our vehicle sales vertical complements the parts business, enabling fleet operators, garages, and service centers to receive complete operational support under one unified platform.
+          </p>
+          <p style="color: white; font-size: 1.2rem; font-weight: 600; line-height: 1.6; margin-top: 2rem;">
+            Autyzone is more than a trading company — we are building a technology driven automotive network designed for speed, accuracy, and long term scalability.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION & MISSION -->
+    <section style="background-color: #15161d; padding: 6rem 0; text-align: center;">
+      <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr)); gap: 4rem;">
+        <div>
+          <span class="eyebrow">OUR VISION</span>
+          <h3 style="font-size: 2rem; color: #fff; font-family: var(--font-display); margin-bottom: 1.5rem;">Building a Parts Led Ecosystem</h3>
+          <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.8;">
+            To build a parts led business ecosystem that connects supply, inventory intelligence, warehouse operations, and vehicle sales — all powered by advanced smart software.
+          </p>
+        </div>
+        <div>
+          <span class="eyebrow">OUR MISSION</span>
+          <h3 style="font-size: 2rem; color: #fff; font-family: var(--font-display); margin-bottom: 1.5rem;">Empowering Automotive Businesses</h3>
+          <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.8;">
+            To deliver reliable, fast, and technology enabled automotive solutions that empower businesses, enhance operational efficiency, and redefine how parts and vehicles are sourced.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR SERVICES -->
+    <section style="padding: 6rem 0; background: linear-gradient(180deg, #0a0a0c 0%, #15161d 100%); position: relative; overflow: hidden;">
+      <!-- Subtle background decoration -->
+      <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(229,57,53,0.05) 0%, rgba(0,0,0,0) 70%); border-radius: 50%; z-index: 0;"></div>
+      <div style="position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0) 70%); border-radius: 50%; z-index: 0;"></div>
+      
+      <div class="container" style="position: relative; z-index: 1;">
+        <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+          <span class="eyebrow">WHAT WE DO</span>
+          <h2 class="section-title">Our Services</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 2rem; text-align: center;">
+          
+          <div class="about-service-card">
+            <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 1rem;">Automotive Parts Supply</h3>
+            <p style="color: #aaa; margin-bottom: 1.5rem; font-size: 0.95rem;">Wholesale and retail distribution of genuine and aftermarket parts for all major vehicle brands.</p>
+            <ul style="color: #ccc; line-height: 1.8; list-style-type: none; padding: 0;">
+              <li><span style="color: var(--primary-color);">✓</span> Real time availability</li>
+              <li><span style="color: var(--primary-color);">✓</span> Competitive pricing</li>
+              <li><span style="color: var(--primary-color);">✓</span> Trusted sourcing</li>
+              <li><span style="color: var(--primary-color);">✓</span> Regional & international supplier network</li>
+            </ul>
+          </div>
+
+          <div class="about-service-card">
+            <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 1rem;">B2B Wholesale Solutions</h3>
+            <p style="color: #aaa; margin-bottom: 1.5rem; font-size: 0.95rem;">Tailored support including live quoting, credit terms, and volume‑based incentives.</p>
+            <ul style="color: #ccc; line-height: 1.8; list-style-type: none; padding: 0;">
+              <li><span style="color: var(--primary-color);">✓</span> Fleet operators</li>
+              <li><span style="color: var(--primary-color);">✓</span> Garages & workshops</li>
+              <li><span style="color: var(--primary-color);">✓</span> Service centers</li>
+              <li><span style="color: var(--primary-color);">✓</span> Dealerships</li>
+            </ul>
+          </div>
+
+          <div class="about-service-card">
+            <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 1rem;">Vehicle Sales</h3>
+            <p style="color: #aaa; margin-bottom: 1.5rem; font-size: 0.95rem;">Complementing the parts business for complete operational support.</p>
+            <ul style="color: #ccc; line-height: 1.8; list-style-type: none; padding: 0;">
+              <li><span style="color: var(--primary-color);">✓</span> Fleet vehicles</li>
+              <li><span style="color: var(--primary-color);">✓</span> Commercial vehicles</li>
+            </ul>
+          </div>
+
+          <div class="about-service-card">
+            <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 1rem;">Tech Driven Operations</h3>
+            <p style="color: #aaa; margin-bottom: 1.5rem; font-size: 0.95rem;">Smart software powering a seamless automotive ecosystem.</p>
+            <ul style="color: #ccc; line-height: 1.8; list-style-type: none; padding: 0;">
+              <li><span style="color: var(--primary-color);">✓</span> Inventory planning</li>
+              <li><span style="color: var(--primary-color);">✓</span> Warehouse management</li>
+              <li><span style="color: var(--primary-color);">✓</span> Order tracking</li>
+              <li><span style="color: var(--primary-color);">✓</span> Forecasting & analytics</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section style="position: relative; padding: 6rem 0; overflow: hidden;">
+      <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+        <source src="media/_Elation_%20-%20Blender%20Car%20Animated%20Short.mp4" type="video/mp4">
+      </video>
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 12, 0.85); z-index: 2;"></div>
+      
+      <div class="container" style="position: relative; z-index: 3;">
+        <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+          <span class="eyebrow">OUR ADVANTAGE</span>
+          <h2 class="section-title">Why Choose Us</h2>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; gap: 2rem; max-width: 800px; margin: 0 auto; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 3rem; border-radius: 12px; backdrop-filter: blur(10px);">
+        
+        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+          <div style="background: rgba(229, 57, 53, 0.1); color: var(--primary-color); padding: 1rem; border-radius: 8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <div>
+            <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">One Stop Automotive Ecosystem</h4>
+            <p style="color: #aaa; line-height: 1.6;">Parts, vehicles, and technology — all under one roof.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+          <div style="background: rgba(229, 57, 53, 0.1); color: var(--primary-color); padding: 1rem; border-radius: 8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </div>
+          <div>
+            <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Speed & Availability</h4>
+            <p style="color: #aaa; line-height: 1.6;">Real time inventory visibility and fast fulfillment.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+          <div style="background: rgba(229, 57, 53, 0.1); color: var(--primary-color); padding: 1rem; border-radius: 8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <div>
+            <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Trusted Sourcing</h4>
+            <p style="color: #aaa; line-height: 1.6;">Genuine and verified parts from authorized suppliers.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+          <div style="background: rgba(229, 57, 53, 0.1); color: var(--primary-color); padding: 1rem; border-radius: 8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <div>
+            <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Data Driven Efficiency</h4>
+            <p style="color: #aaa; line-height: 1.6;">Software powered operations that reduce delays and errors.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+          <div style="background: rgba(229, 57, 53, 0.1); color: var(--primary-color); padding: 1rem; border-radius: 8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div>
+            <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Wholesale First Strategy</h4>
+            <p style="color: #aaa; line-height: 1.6;">A strong B2B foundation ensures reliability, scale, and consistent supply.</p>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" style="margin-top: auto;">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <div class="logo-area">
+          <img src="media/logo2.png" alt="Autyzone Logo" class="brand-logo-footer">
+        </div>
+        <p class="footer-desc">Autyzone delivers genuine automotive parts, vehicle sales, and tech driven solutions. A complete ecosystem where parts, vehicles & technology come together.</p>
+        
+      </div>
+      
+      <div class="footer-col">
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="parts.html">Automotive Parts Supply</a></li>
+          <li><a href="wholesale.html">B2B Wholesale Solutions</a></li>
+          <li><a href="vehicle.html">Vehicle Sales</a></li>
+          <li><a href="tech.html">Tech Driven Operations</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Support</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col" id="contact">
+        <h4 class="footer-heading">Contact Us</h4>
+        <ul class="footer-links contact-links">
+          <li>📞 544587980</li>
+          <li>✉️ sales@autyzone.com</li>
+          <li>📍 Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, U.A.E.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container flex-between">
+        <p>&copy; 2026 AUTYZONE LLC. All rights reserved.</p>
+        <p>A Technology Driven Automotive Network</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <a href="https://wa.me/971544587980" target="_blank" class="whatsapp-cta" style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; border-radius: 50%; padding: 15px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+</body>
+</html>
