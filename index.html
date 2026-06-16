@@ -46,10 +46,8 @@
             <a href="tech.html">Tech Driven Operations</a>
           </div>
         </div>
+        <a href="contact.html">Contact Us</a>
       </nav>
-      <div class="nav-actions">
-        <a href="contact.html" class="btn btn-primary btn-shop-now">CONTACT US</a>
-      </div>
     </div>
   </header>
 
@@ -87,47 +85,83 @@
   </section>
 
   <!-- SECTION 3: ABOUT US -->
-  <section class="about-section" id="about">
-    <div class="about-bg">
-      <div class="about-bg-overlay"></div>
-    </div>
-    <div class="container about-container">
-      <div class="section-header">
-        <span class="eyebrow">ABOUT US</span>
-        <h2 class="section-title">Built on a Parts First Philosophy</h2>
+  <section id="about" style="display: flex; flex-wrap: wrap; background-color: #ffffff; color: #111; min-height: 80vh;">
+    <!-- LEFT SIDE: TEXT -->
+    <div style="flex: 1; min-width: 300px; padding: 6rem 8%; display: flex; flex-direction: column; justify-content: center;">
+      <span style="color: #d49526; font-size: 0.85rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 0.5rem;">ABOUT US</span>
+      <h2 style="font-family: var(--font-display, serif); font-size: 3.5rem; margin-bottom: 0.5rem; font-weight: 400; letter-spacing: -1px;">Autyzone LLC</h2>
+      <span style="color: #d49526; font-size: 0.9rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 2.5rem;">PARTS FIRST PHILOSOPHY</span>
+      
+      <p style="color: #555; font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+        Autyzone LLC is an automotive solutions company built on a parts first philosophy. We operate a dual vertical model that combines automotive parts supply with a supporting vehicle sales division, creating a seamless ecosystem for businesses and consumers across regional and international markets.
+      </p>
+      <p style="color: #555; font-size: 1.1rem; line-height: 1.7; margin-bottom: 2.5rem;">
+        Our core strength lies in the wholesale and retail distribution of genuine and aftermarket automotive parts, supported by smart software, real time inventory visibility, and efficient supply chain operations.
+      </p>
+      
+      <!-- TAGS -->
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
+        <span style="border: 1px solid rgba(0,0,0,0.15); padding: 0.6rem 1rem; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">AUTOMOTIVE PARTS</span>
+        <span style="border: 1px solid rgba(0,0,0,0.15); padding: 0.6rem 1rem; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">VEHICLE SALES</span>
+        <span style="border: 1px solid rgba(0,0,0,0.15); padding: 0.6rem 1rem; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">TECH DRIVEN</span>
       </div>
-      <div class="about-text">
-        <p style="margin-bottom: 1.5rem;">Autyzone LLC is an automotive solutions company built on a parts first
-          philosophy. We operate a dual vertical model that combines automotive parts supply with a supporting vehicle
-          sales division, creating a seamless ecosystem for businesses and consumers across regional and international
-          markets.</p>
-        <p style="margin-bottom: 1.5rem;">Our core strength lies in the wholesale and retail distribution of genuine and
-          aftermarket automotive parts, supported by smart software, real time inventory visibility, and efficient
-          supply chain operations. Our vehicle sales vertical complements the parts business, enabling fleet operators,
-          garages, and service centers to receive complete operational support under one unified platform.</p>
-        <p>Autyzone is more than a trading company — we are building a technology driven automotive network designed for
-          speed, accuracy, and long term scalability.</p>
 
-      </div>
+    </div>
+    
+    <!-- RIGHT SIDE: IMAGE SLIDESHOW -->
+    <div style="flex: 1; min-width: 300px; min-height: 400px; position: relative; overflow: hidden;">
+      <style>
+        .home-slide {
+          position: absolute;
+          top: 0; left: 0; width: 100%; height: 100%;
+          opacity: 0;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          animation: home-fade-bg 15s infinite;
+        }
+        .home-slide-1 { background-image: url('media/palisade.png'); animation-delay: 0s; }
+        .home-slide-2 { background-image: url('media/PALISADE.webp'); animation-delay: 5s; }
+        .home-slide-3 { background-image: url('media/HD-wallpaper-kia-seltos-2021-anniversary-edition-front-view-exterior-new-seltos-seltos-tuning-korean-cars-kia.jpg'); animation-delay: 10s; }
+        
+        @keyframes home-fade-bg {
+          0% { opacity: 0; transform: scale(1.05); }
+          5% { opacity: 1; transform: scale(1); }
+          28% { opacity: 1; transform: scale(1); }
+          33% { opacity: 0; transform: scale(1.05); }
+          100% { opacity: 0; }
+        }
+      </style>
+      <div class="home-slide home-slide-1"></div>
+      <div class="home-slide home-slide-2"></div>
+      <div class="home-slide home-slide-3"></div>
     </div>
   </section>
 
   <!-- SECTION 4: VISION & MISSION -->
-  <section class="vision-section" id="vision">
-    <div class="vision-bg">
-      <div class="vision-bg-overlay"></div>
-    </div>
-    <div class="container vision-container">
-      <div class="vision-grid">
-        <div class="vision-card">
-          <h3 class="vision-title">OUR VISION</h3>
-          <p class="vision-text">To build a parts led business ecosystem that connects supply, inventory intelligence,
-            warehouse operations, and vehicle sales — all powered by advanced smart software.</p>
+  <section id="vision" style="padding: 6rem 0; background-color: #0b0c10;">
+    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+      <!-- VISION -->
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+        <img src="media/vision.png" alt="Our Vision" style="width: 100%; height: 250px; object-fit: cover;">
+        <div style="padding: 2.5rem;">
+          <h3 style="color: #d49526; font-family: var(--font-display, serif); font-size: 2rem; margin-bottom: 1rem;">OUR VISION</h3>
+          <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.7;">
+            To build a parts led business ecosystem that connects supply, inventory intelligence,
+            warehouse operations, and vehicle sales — all powered by advanced smart software.
+          </p>
         </div>
-        <div class="vision-card">
-          <h3 class="vision-title">OUR MISSION</h3>
-          <p class="vision-text">To deliver reliable, fast, and technology enabled automotive solutions that empower
-            businesses, enhance operational efficiency, and redefine how parts and vehicles are sourced.</p>
+      </div>
+      
+      <!-- MISSION -->
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+        <img src="media/mission.png" alt="Our Mission" style="width: 100%; height: 250px; object-fit: cover;">
+        <div style="padding: 2.5rem;">
+          <h3 style="color: #d49526; font-family: var(--font-display, serif); font-size: 2rem; margin-bottom: 1rem;">OUR MISSION</h3>
+          <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.7;">
+            To deliver reliable, fast, and technology enabled automotive solutions that empower
+            businesses, enhance operational efficiency, and redefine how parts and vehicles are sourced.
+          </p>
         </div>
       </div>
     </div>
@@ -557,17 +591,17 @@
       <div class="footer-col">
         <h4 class="footer-heading">Quick Links</h4>
         <ul class="footer-links">
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="#vision">Vision & Mission</a></li>
-          <li><a href="#contact">Contact Support</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="about.html#faq">FAQ</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">Terms & Condition</a></li>
         </ul>
       </div>
 
       <div class="footer-col" id="contact">
         <h4 class="footer-heading">Contact Us</h4>
         <ul class="footer-links contact-links">
-          <li>📞 544587980</li>
+          <li>📞 +971 544587980</li>
           <li>✉️ sales@autyzone.com</li>
           <li>📍 Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, U.A.E.</li>
         </ul>
