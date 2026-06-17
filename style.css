@@ -2237,6 +2237,10 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    position: absolute !important;
+  }
+
   .mobile-menu-btn {
     display: block !important;
     background: transparent;

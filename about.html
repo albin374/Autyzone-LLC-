@@ -83,12 +83,19 @@
           <span style="color: #d49526; font-size: 0.85rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 0.5rem; display: block;">OUR CORE VALUES</span>
           <h2 style="font-family: var(--font-display, serif); font-size: 3rem; font-weight: 400; letter-spacing: -1px; color: #fff; margin: 0;">Vision & Mission</h2>
         </div>
-
+        <style>
+          .vm-box { text-align: left; }
+          .vm-icon { margin: 0 0 1.5rem 0; }
+          @media (max-width: 768px) {
+            .vm-box { text-align: center !important; }
+            .vm-icon { margin: 0 auto 1.5rem auto !important; }
+          }
+        </style>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem;">
           
           <!-- VISION BOX -->
-          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 3rem; text-align: left; transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.4)'; this.style.borderColor='rgba(212,149,38,0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255,255,255,0.1)';">
-            <div style="width: 60px; height: 60px; background: rgba(212,149,38,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+          <div class="vm-box" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 3rem; transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.4)'; this.style.borderColor='rgba(212,149,38,0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255,255,255,0.1)';">
+            <div class="vm-icon" style="width: 60px; height: 60px; background: rgba(212,149,38,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
               <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#d49526" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
@@ -102,8 +109,8 @@
           </div>
 
           <!-- MISSION BOX -->
-          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 3rem; text-align: left; transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.4)'; this.style.borderColor='rgba(212,149,38,0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255,255,255,0.1)';">
-            <div style="width: 60px; height: 60px; background: rgba(212,149,38,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+          <div class="vm-box" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 3rem; transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.4)'; this.style.borderColor='rgba(212,149,38,0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255,255,255,0.1)';">
+            <div class="vm-icon" style="width: 60px; height: 60px; background: rgba(212,149,38,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
               <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#d49526" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
                 <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
