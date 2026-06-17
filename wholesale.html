@@ -414,41 +414,66 @@
   </section>
 
   <!-- FAQ -->
-  <section class="ws-section" style="position: relative; overflow: hidden; color: white; padding: 6rem 0;">
-    <video autoplay loop muted playsinline
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
-      <source src="media/7000 RPM .mp4" type="video/mp4">
-    </video>
-    <div
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1;">
+  <section style="display: flex; flex-wrap: wrap; min-height: 70vh;">
+    <div style="flex: 1; min-width: 300px; padding: 6rem 8%; display: flex; flex-direction: column; justify-content: center; background-color: #ffffff;">
+      <span style="color: #d49526; font-size: 0.85rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 0.5rem;">SUPPORT</span>
+      <h2 style="font-family: var(--font-display, serif); font-size: 3rem; margin-bottom: 1.5rem; font-weight: 400; letter-spacing: -1px; color: #d42b2b;">Frequently Asked Questions</h2>
+      <p style="color: #666; font-size: 1.1rem; line-height: 1.7;">
+        Have questions about our parts, vehicle sales, or B2B platform? Find quick answers here or reach out to our dedicated support team.
+      </p>
     </div>
-    <div class="container" style="position: relative; z-index: 2;">
-      <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
-        <span class="eyebrow">SUPPORT</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
+    <div style="flex: 1; min-width: 300px; padding: 6rem 8%; display: flex; flex-direction: column; justify-content: center; background: #d42b2b;">
+      
+      <style>
+        .custom-faq-item {
+          border-bottom: 1px solid rgba(255,255,255,0.1);
+          padding: 1.5rem 0;
+          cursor: pointer;
+        }
+        .custom-faq-question {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: #fff;
+          font-size: 1.1rem;
+          font-weight: 500;
+        }
+        .custom-faq-answer {
+          color: #000;
+          font-size: 0.95rem;
+          line-height: 1.6;
+          margin-top: 1rem;
+          display: none;
+        }
+        .custom-faq-item.active .custom-faq-answer {
+          display: block;
+        }
+        .custom-faq-item.active .custom-faq-icon {
+          transform: rotate(45deg);
+        }
+        .custom-faq-icon {
+          transition: transform 0.3s ease;
+          color: #d49526;
+        }
+      </style>
+
+      <div class="custom-faq-item" onclick="this.classList.toggle('active')">
+        <div class="custom-faq-question">Who can apply for a wholesale account? <span class="custom-faq-icon">+</span></div>
+        <div class="custom-faq-answer">Fleet operators, garages, workshops, service centers, dealerships, and automotive businesses with valid operational documentation.</div>
       </div>
-      <div style="max-width: 800px; margin: 0 auto;">
-        <div class="faq-item">
-          <h3 class="faq-q">Who can apply for a wholesale account?</h3>
-          <p class="faq-a">Fleet operators, garages, workshops, service centers, dealerships, and automotive businesses
-            with valid operational documentation.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q">Is there a minimum order quantity?</h3>
-          <p class="faq-a">Minimum order requirements may vary depending on the product category. Contact your account
-            manager for specifics.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q">Do you offer bulk discounts?</h3>
-          <p class="faq-a">Yes, special escalating discounts are strictly available for high-volume and recurring
-            purchases.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q">Can I request a custom quote?</h3>
-          <p class="faq-a">Yes, our B2B team can provide tailored quotations based on your precise requirements and
-            expected volumes.</p>
-        </div>
+      <div class="custom-faq-item" onclick="this.classList.toggle('active')">
+        <div class="custom-faq-question">Is there a minimum order quantity? <span class="custom-faq-icon">+</span></div>
+        <div class="custom-faq-answer">Minimum order requirements may vary depending on the product category. Contact your account manager for specifics.</div>
       </div>
+      <div class="custom-faq-item" onclick="this.classList.toggle('active')">
+        <div class="custom-faq-question">Do you offer bulk discounts? <span class="custom-faq-icon">+</span></div>
+        <div class="custom-faq-answer">Yes, special escalating discounts are strictly available for high-volume and recurring purchases.</div>
+      </div>
+      <div class="custom-faq-item" onclick="this.classList.toggle('active')">
+        <div class="custom-faq-question">Can I request a custom quote? <span class="custom-faq-icon">+</span></div>
+        <div class="custom-faq-answer">Yes, our B2B team can provide tailored quotations based on your precise requirements and expected volumes.</div>
+      </div>
+
     </div>
   </section>
 

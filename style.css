@@ -139,7 +139,7 @@ h6 {
 }
 
 .brand-logo-footer {
-  height: 180px;
+  height: 90px;
   max-width: 100%;
   width: auto;
   object-fit: contain;
@@ -1137,7 +1137,8 @@ h6 {
 }
 
 .brand-col .logo-area {
-  margin-bottom: -1rem;
+  margin-top: -20px;
+  margin-bottom: 0;
 }
 
 .footer-desc {
