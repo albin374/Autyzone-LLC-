@@ -36,10 +36,10 @@
         <div class="dropdown">
           <a href="#" class="dropbtn">Products ▾</a>
           <div class="dropdown-content">
-            <a href="Automotive-Parts-Supply.html">Automotive Parts Supply</a>
-            <a href="B2B-Wholesale-Solutions.html">B2B Wholesale Solutions</a>
-            <a href="Vehicle-Sales.html">Vehicle Sales</a>
-            <a href="Tech-Driven-Operations.html">Tech Driven Operations</a>
+            <a href="automotive-parts-supply.html">Automotive Parts Supply</a>
+            <a href="b2b-wholesale-solutions.html">B2B Wholesale Solutions</a>
+            <a href="vehicle-sales.html">Vehicle Sales</a>
+            <a href="tech-driven-operations.html">Tech Driven Operations</a>
           </div>
         </div>
         <a href="contact.html">Contact Us</a>
@@ -183,7 +183,7 @@
     <!-- 4. WHY CHOOSE US (Horizontal Layout) -->
     <section style="padding: 6rem 8%; background: #ffffff; color: #111;">
       <h2
-        style="font-family: var(--font-display, serif); font-size: 2.2rem; margin-bottom: 4rem; font-weight: 600; text-align: left; color: #111;">
+        style="font-family: var(--font-display, serif); font-size: 2.2rem; margin-bottom: 4rem; font-weight: 600; text-align: center; color: #111;">
         Why Customers Choose Autyzone</h2>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 3rem;">
@@ -315,6 +315,38 @@
     </section>
 
     <!-- 3. OUR SERVICES (Blue Grid Layout) -->
+    <style>
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .call-us-block {
+        position: absolute;
+        top: 15%;
+        right: 10%;
+        z-index: 10;
+        text-align: right;
+        color: #fff;
+      }
+      @media (max-width: 768px) {
+        .services-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .call-us-block {
+          position: relative !important;
+          top: auto !important;
+          right: auto !important;
+          text-align: center !important;
+          margin-top: 2rem !important;
+        }
+        .right-content-wrapper {
+          flex-direction: column !important;
+        }
+      }
+    </style>
     <section
       style="display: flex; flex-wrap: wrap; background: #285cef; color: #fff; min-height: 70vh; position: relative;">
 
@@ -328,8 +360,7 @@
           style="font-family: var(--font-display, serif); font-size: 3rem; margin-bottom: 3rem; font-weight: 600; letter-spacing: -1px; text-align: center;">
           Our Services</h2>
 
-        <div
-          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 700px; margin: 0 auto;">
+        <div class="services-grid">
 
           <!-- Box 1 -->
           <div
@@ -393,13 +424,9 @@
       </div>
 
       <!-- Right Content (Images) -->
-      <div
+      <div class="right-content-wrapper"
         style="flex: 1; min-width: 300px; padding: 6rem 8%; display: flex; align-items: center; justify-content: center; position: relative;">
-        <div style="position: absolute; top: 15%; right: 10%; z-index: 10; text-align: right; color: #fff;">
-          <span style="font-size: 0.9rem; opacity: 0.9;">Call us 24/7</span>
-          <h3 style="font-size: 1.4rem; font-weight: 700; margin: 0;">+971 544587980</h3>
-        </div>
-
+        
         <div style="position: relative; width: 100%; max-width: 450px; height: 500px;">
           <!-- Main Image -->
           <img src="media/about_services.png" alt="Company Overview"
@@ -408,6 +435,11 @@
           <!-- Overlapping Image -->
           <img src="media/about_why_us.png" alt="Workshop"
             style="width: 70%; height: 300px; object-fit: cover; border: 8px solid #fff; position: absolute; bottom: 0; right: 0; z-index: 2;">
+        </div>
+
+        <div class="call-us-block" style="position: absolute; top: 15%; right: 10%; z-index: 10; text-align: right; color: #fff;">
+          <span style="font-size: 0.9rem; opacity: 0.9;">Call us 24/7</span>
+          <h3 style="font-size: 1.4rem; font-weight: 700; margin: 0;">+971 544587980</h3>
         </div>
       </div>
     </section>
@@ -433,10 +465,10 @@
       <div class="footer-col">
         <h4 class="footer-heading">Services</h4>
         <ul class="footer-links">
-          <li><a href="Automotive-Parts-Supply.html">Automotive Parts Supply</a></li>
-          <li><a href="B2B-Wholesale-Solutions.html">B2B Wholesale Solutions</a></li>
-          <li><a href="Vehicle-Sales.html">Vehicle Sales</a></li>
-          <li><a href="Tech-Driven-Operations.html">Tech Driven Operations</a></li>
+          <li><a href="automotive-parts-supply.html">Automotive Parts Supply</a></li>
+          <li><a href="b2b-wholesale-solutions.html">B2B Wholesale Solutions</a></li>
+          <li><a href="vehicle-sales.html">Vehicle Sales</a></li>
+          <li><a href="tech-driven-operations.html">Tech Driven Operations</a></li>
         </ul>
       </div>
 
